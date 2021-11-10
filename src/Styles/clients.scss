@@ -1,0 +1,18 @@
+.clients{
+    background-color: #F8FBFF;
+    height: 167px;
+    width: 100%;
+    margin-top:220px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+
+    .clients-logo:not(:nth-last-child(2)){
+        width: 100px;
+        height: 35px;
+    }
+    .clients-logo:not(:last-child){
+        margin-right:135px ;
+    }
+
+}

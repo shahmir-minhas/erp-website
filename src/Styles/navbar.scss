@@ -1,0 +1,66 @@
+nav {
+  background-color: #1760a6;
+  height: 79px;
+  width: 100%;
+  padding: 16px 106px 21px 100px;
+  position: fixed;
+  z-index:1;
+
+  .nav-logo {
+    padding-top: 10px;
+  }
+  .nav-logo h1 {
+    color: #f3f3f3;
+    font-size: 20px;
+    margin-left: 5px;
+    // font-family: $font-family-Nunito;
+    align-items: baseline;
+  }
+  button {
+    background-color: transparent;
+    border: solid 1px #ffffff;
+    padding: 0px 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 2px;
+    height: 42px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:0;
+
+    li {
+
+      list-style-type: none;
+    //   padding-bottom: 1px;
+    
+      .link {
+        color: #ffffff;
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1px;
+        margin-left: 53px;
+      }
+      .link:hover {
+        color: #ffffff;
+        border-bottom: 1px solid white;
+      }
+      .link:active {
+        color: #ffffff;
+        border-bottom: 1px solid white;
+      }
+      .link:focus {
+        color: #ffffff;
+        border-bottom: 1px solid white;
+      }
+      .link:visited {
+        color: #ffffff;
+        // border-bottom: 1px solid white;
+      }
+    }
+  }
+}

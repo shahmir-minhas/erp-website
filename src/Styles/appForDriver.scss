@@ -1,0 +1,48 @@
+$font-color: #041424;
+.appDriver {
+  padding: 229px 100px 160px 100px;
+  h1 {
+    font-size: 40px;
+    color: $font-color;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  h4{
+      font-weight: normal;
+  }
+  p {
+    font-size: 16px;
+    color: $font-color;
+    margin-top:8px;
+  }
+  .app-content{
+    margin-top: 68px;
+  }
+
+  .vertical-check {
+    width: 7px;
+    background-color: #e8e8e8;
+    height: 381px;
+    margin-right: 91px;
+  }
+  .cirlce {
+    width: 13px;
+    height: 12px;
+    background: #e8e8e8 0% 0% no-repeat padding-box;
+  }
+  .circle-blue {
+    width: 26px;
+    height: 26px;
+    background-color: #5068b8;
+    border: 1px solid #5068b8;
+  }
+
+  .StarIcon {
+    width: 20%;
+    height: 20%;
+    align-self: center;
+  }
+  .p-32{
+      padding-bottom:32px;
+  }
+}

@@ -1,34 +1,38 @@
 $font16: 16px;
 
-.cardPrimary {
+.cardSecondary {
   // width: 376px;
   // height: 26.125rem;
+  width: 76%;
+  height: 266px;
   background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 10px 20px #98989829;
   border-radius: 4px;
-  opacity: 1;
+  margin-bottom: 48px;
 
-  h4 {
-    font-size: 24px;
+  h6 {
+    font-size: 16px;
     color: #041424;
-    font-weight: 700;
+    font-weight: bold;
   }
   p {
     font-size: $font16;
-    text-align: left;
+    margin-top: 16px;
   }
   a {
     font-size: $font16;
-    color: #ff9720;
+    color: #1760A6;
     margin-top:33px;
   }
   .img-container {
-    width: 136px;
-    height: 136px;
+    width: 84px;
+    height: 84px;
     background: #f3f6ff 0% 0% no-repeat padding-box;
     border-radius: 50%;
     margin-top: 24px;
     margin-bottom: 16px;
-    padding: 27px;
+    padding: 18px;
+  }
+  .img-card-secondary{
+      width: 50px;
   }
 }

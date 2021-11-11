@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import { ReactComponent as Logo } from "../../../Assets/Icons/logo.svg";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "../../../Styles/navbar.scss";
-import Button from './../../Common/Button/button';
+
+import Button from "./../../Common/Button/button";
 
 const NavBar = () => {
-    const navLinks = [
-    {title: "Home", url: "/"},
-    {title: "About Us", url: "/about-us"},
-    {title: "Features", url: "/features"},
-    {title: "Pricing Plan", url: "/pricing-plan"},
+  const navLinks = [
+    { title: "Home", url: "/" },
+    { title: "About Us", url: "/about-us" },
+    { title: "Features", url: "/features" },
+    { title: "Pricing Plan", url: "/pricing-plan" },
     {
       title: "Contact Us",
-      url: "/contact-us"
+      url: "/contact-us",
     },
   ];
+
   return (
     <nav>
       <div className="d-flex justify-content-between">
@@ -22,10 +24,6 @@ const NavBar = () => {
           <Logo />
           <h1>Prism</h1>
         </div>
-
-      
-        {/* links */}
-
         <ul className="">
           {navLinks.map((link) => {
             return (

@@ -5,14 +5,21 @@ import { ReactComponent as Path } from "../../../Assets/Icons/Path.svg";
 
 const CardPrimary = (props) => {
   return (
-    <div className="cardPrimary text-center p-4">
-      <div className="img-container mx-auto">
-        <img src={props.imgSource} alt="" />
-      </div>
+    <div className="col-4">
+      <div className="cardPrimary text-center p-3">
+        <div className="img-container mx-auto">
+          <img src={props.imgSource} alt="" />
+        </div>
 
-      <h4>{props.title}</h4>
-      <p>{props.body}</p>
-      <Link to={props.link}>learn more <span><Path/></span> </Link>
+        <h4>{props.title}</h4>
+        <p>{props.body}</p>
+        <Link to={props.link}>
+          learn more{" "}
+          <span>
+            <Path />
+          </span>{" "}
+        </Link>
+      </div>
     </div>
   );
 };

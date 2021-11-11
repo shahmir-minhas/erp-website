@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "../../../Styles/solutions.scss";
 import CardPrimary from "./../../Common/Card Primary/cardPrimary";
-import Sketch from '../../../Assets/sketch.png';
-import Boxes from '../../../Assets/boxes.png';
-import Store from '../../../Assets/store.png';
+import Sketch from "../../../Assets/sketch.png";
+import Boxes from "../../../Assets/boxes.png";
+import Store from "../../../Assets/store.png";
 
 const Solutions = () => {
   const cards = [
@@ -14,7 +14,7 @@ const Solutions = () => {
       link: "/",
     },
     {
-      imgSource:Store ,
+      imgSource: Store,
       title: "Construction Retail Store",
       body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records",
       link: "/",
@@ -29,7 +29,7 @@ const Solutions = () => {
 
   return (
     <React.Fragment>
-      <div className="solutions">
+      <section className="solutions">
         <div className="content">
           <h1>We Provide Solutions For Different Business</h1>
           <p>
@@ -38,18 +38,20 @@ const Solutions = () => {
             <br /> stores and gives you ease to get all the records in one place
             without worrying about.
           </p>
-          <div className="d-flex justify-content-between mt-5">
-            {cards.map((card) => (
-              <CardPrimary
-                imgSource={card.imgSource}
-                title={card.title}
-                body={card.body}
-                link={card.link}
-              />
-            ))}
+          <div className="">
+            <div className="row justify-content-between card-mt">
+              {cards.map((card) => (
+                <CardPrimary
+                  imgSource={card.imgSource}
+                  title={card.title}
+                  body={card.body}
+                  link={card.link}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </React.Fragment>
   );
 };

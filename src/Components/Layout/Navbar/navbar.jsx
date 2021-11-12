@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { ReactComponent as Logo } from "../../../Assets/Icons/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../../Styles/navbar.scss";
 
 import Button from "./../../Common/Button/button";
+import ReqDemoForm from "../Modal/ReqDemoForm";
 
 const NavBar = () => {
   const navLinks = [
-    { title: "Home", url: "/" },
+    { title: "Home", url: "/home" },
     { title: "About Us", url: "/about-us" },
     { title: "Features", url: "/features" },
     { title: "Pricing Plan", url: "/pricing-plan" },
@@ -32,16 +33,14 @@ const NavBar = () => {
                 className="nav-item"
                 // className={currentPage === index ? "li-active" : ""}
               >
-                <Link className="nav-link link" to={link.url}>
+                <NavLink className=" link" to={link.url}>
                   {link.title}
-                </Link>
+                </NavLink>
               </li>
             );
           })}
         </ul>
-        <button className="" type="button">
-          Request Demo
-        </button>
+        <ReqDemoForm/>
       </div>
     </nav>
   );

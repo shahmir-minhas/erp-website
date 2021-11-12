@@ -4,7 +4,7 @@ nav {
   width: 100%;
   padding: 16px 106px 21px 100px;
   position: fixed;
-  z-index:1;
+  z-index: 1;
 
   .nav-logo {
     padding-top: 10px;
@@ -25,18 +25,34 @@ nav {
     border-radius: 2px;
     height: 42px;
   }
+
+  button:hover {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    color: #1760a6;
+    opacity: 0.8;
+  }
+  
+  button:active {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    color: #1760a6;
+    opacity: 0.8;
+  }
   ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-left:0;
+    padding-left: 0;
+    margin:0;
 
     li {
-
       list-style-type: none;
-    //   padding-bottom: 1px;
-    
+      //   padding-bottom: 1px;
+
       .link {
         color: #ffffff;
         font-size: 16px;
@@ -44,23 +60,24 @@ nav {
         padding-right: 0;
         padding-bottom: 1px;
         margin-left: 53px;
+        border-bottom: 1px solid #1760a6;
       }
       .link:hover {
         color: #ffffff;
         border-bottom: 1px solid white;
       }
-      .link:active {
+       .active {
         color: #ffffff;
         border-bottom: 1px solid white;
       }
-      .link:focus {
-        color: #ffffff;
-        border-bottom: 1px solid white;
-      }
-      .link:visited {
-        color: #ffffff;
-        // border-bottom: 1px solid white;
-      }
+      // .link:focus {
+      //   color: #ffffff;
+      //   border-bottom: 1px solid white;
+      // }
+      // .link:visited {
+      //   color: #ffffff;
+      //   // border-bottom: 1px solid white;
+      // }
     }
   }
 }

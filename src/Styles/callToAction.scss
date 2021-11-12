@@ -1,21 +1,22 @@
-.callToAction{
-    background: #1760A6;
-    height: 268px;
-    padding: 40px 100px 48px;
-    margin: 160px 0;
-    text-align: center;
-    
+.callToAction {
+  background: #1760a6;
+  height: 268px;
+  padding: 40px 100px 48px;
+  margin: 160px 0;
+  text-align: center;
+  width: 100%;
   background: transparent url("../Assets/hero-background.svg") 0% 0% no-repeat
-  padding-box;
-    
-    h1{
-        color:#FFFFFF ;
-        font-weight: bold;
-    }
-    p{
-        color: #ffffff;
-    }
-    div{
-        width: 34%;
-    }
+    padding-box;
+  background-size: cover;
+
+  h1 {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  p {
+    color: #ffffff;
+  }
+  div {
+    width: 34%;
+  }
 }

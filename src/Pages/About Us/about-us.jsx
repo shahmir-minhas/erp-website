@@ -1,33 +1,73 @@
 import React, { Component } from "react";
-import { Breadcrumb, Card } from "antd";
+import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import "../../Styles/About Us/aboutUs.scss";
 import CardPrimary from "./../../Components/Common/Card Primary/cardPrimary";
-import Sketch from ".././../Assets/sketch.png";
-import { ReactComponent as CheckMark } from ".././../Assets/Icons/checkMark.svg";
-// import Boxes from "../../../Assets/boxes.png";
-// import Store from "../../../Assets/store.png";
+import Sketch from "../../Assets/sketch.png";
+import Box from "../../Assets/boxes.png";
+import Graph from "../../Assets/graph.png";
+import CheckMarkBlue from "../../Assets/Icons/checkMarkBlu.png";
 
 const AboutUs = () => {
   const visionCard = [
     {
+      id: 1,
       imgSource: Sketch,
       title: "Easy To Use",
       body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records ",
-      link: "/",
     },
 
     {
-      imgSource: Sketch,
+      id: 2,
+      imgSource: Box,
       title: "Customer Focus",
       body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records ",
-      link: "/",
     },
     {
+      id: 3,
       imgSource: Sketch,
       title: "Smart Solutions",
       body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records ",
-      link: "/",
+    },
+  ];
+  const missionPoints = [
+    {
+      id: 1,
+      imgSource: CheckMarkBlue,
+      body: "We provide best solution which include useful features in a very low price.",
+    },
+
+    {
+      id: 2,
+      imgSource: CheckMarkBlue,
+      body: " Deliver on time & qualitative features to customer and create a family of happy & satisfied customers with long lasting relationship.",
+    },
+    {
+      id: 3,
+      imgSource: CheckMarkBlue,
+      body: "Develop innovative and environment friendly solution to save business information in digital form.",
+    },
+  ];
+
+  const valueProvideCard = [
+    {
+      id: 1,
+      imgSource: Sketch,
+      title: "Quality",
+      body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records ",
+    },
+
+    {
+      id: 2,
+      imgSource: Box,
+      title: "Integrity",
+      body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records ",
+    },
+    {
+      id: 3,
+      imgSource: Sketch,
+      title: "Trust",
+      body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records ",
     },
   ];
   return (
@@ -67,6 +107,7 @@ const AboutUs = () => {
           <div className="row justify-content-between">
             {visionCard.map((card) => (
               <CardPrimary
+                key={card.id}
                 imgSource={card.imgSource}
                 title={card.title}
                 body={card.body}
@@ -75,43 +116,71 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-
       </div>
-        <div className="ourMission">
-          <h1>Our Mission </h1>
-          <p>
-            Our journey starts with our mission, which is persistent. It affirms
-            our purpose as a company and serves as the standard against which we
-            weigh our actions and decisions.
-          </p>
-          <ul className="list-unstyled">
+      <div className="ourMission">
+        <h1>Our Mission </h1>
+        <p>
+          Our journey starts with our mission, which is persistent. It affirms
+          our purpose as a company and serves as the standard against which we
+          weigh our actions and decisions.
+        </p>
+        <ul className="list-unstyled pt-4">
+          {missionPoints.map((points) => (
             <li>
-              {/* <span>{CheckMark}</span> */}
-              <h4>
-                We provide best solution which include useful features in a very
-                low price.
-              </h4>
+              <div className="d-flex">
+                <img src={points.imgSource} alt="" className="me-3" />
+                <h5>{points.body}</h5>
+              </div>
             </li>
-            <li>
-              <h4>
-                We provide best solution which include useful features in a very
-                low price.
-              </h4>
-            </li>
-            <li>
-              <h4>
-                We provide best solution which include useful features in a very
-                low price.
-              </h4>
-            </li>
-            <li>
-              <h4>
-                We provide best solution which include useful features in a very
-                low price.
-              </h4>
-            </li>
-          </ul>
+          ))}
+        </ul>
+      </div>
+      <div className="valueWeProvide">
+        <h1>The Values We Provide</h1>
+        <p>
+          Our journey starts with our mission, which is persistent. It affirms
+          our purpose as a company and serves as the standard against which we
+          weigh our actions and decisions.
+        </p>
+        <div className="row justify-content-between ">
+          {valueProvideCard.map((card) => (
+            <CardPrimary
+              key={card.id}
+              imgSource={card.imgSource}
+              title={card.title}
+              body={card.body}
+              link={card.link}
+            />
+          ))}
         </div>
+      </div>
+      <div className="whyPrism">
+        <div className="row">
+          <div className="col">
+            <h1>Why Prism ?</h1>
+            <p>
+              This is the best digital tool for all your businesses which you
+              operate online it covers Industries like construction, retail
+              stores and gives you ease to get all the records in one place
+              without worrying about.This is the best digital tool for all your
+              businesses which you operate online it covers Industries like
+              construction, retail stores and gives you ease to get all the
+              records in one place without worrying about.This is the best
+              digital tool for all your businesses which you operate online it
+              covers Industries like construction, retail stores and gives you
+              ease to get all the records in one place without worrying
+              about.This is the best digital tool for all your businesses which
+              you operate online it covers Industries like construction, retail
+              stores and gives you ease to get all the records in one place
+              without worrying about.
+            </p>
+            <button className="button-active">Request Demo - It's free</button>
+          </div>
+          <div className="col justify-content-center graph">
+            <img src={Graph} alt=""  />
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   );
 };

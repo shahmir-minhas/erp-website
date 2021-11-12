@@ -29,7 +29,8 @@ $currentBreadCrumb: #d4d4d4;
 
 // -------------------  About us section ---------------------------
 .about {
-  background: transparent url("../../Assets/hero-background.svg") 0% 0% no-repeat padding-box;
+  background: transparent url("../../Assets/hero-background.svg") 0% 0%
+    no-repeat padding-box;
   background-size: cover;
   height: 433px;
   padding-top: 119px;
@@ -37,7 +38,7 @@ $currentBreadCrumb: #d4d4d4;
 
   h1 {
     @include headingLight;
-    margin-top:40px;
+    margin-top: 40px;
   }
   p {
     @include paraLight;
@@ -60,25 +61,71 @@ $currentBreadCrumb: #d4d4d4;
   }
 }
 
-
 // -------------------  Our Vision ---------------------------
-.vision{
+.vision {
   padding: 80px 82px 80px 100px;
-  h1{
+  h1 {
     @include headingDark;
   }
-  p{
+  p {
     @include paraDark;
   }
-  .visionCard{
-    margin-top:80px;
+  .visionCard {
+    margin-top: 80px;
   }
 }
 
 // -------------------  Our Mission ---------------------------
-.ourMission{
-padding: 80px 80px 80px 100px;
-  h1{
+.ourMission {
+  padding: 80px 80px 80px 100px;
+  h1 {
     @include headingDark;
   }
+  h5 {
+    color: #041424;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 5px;
+  }
+  li {
+    margin-bottom: 36px;
+  }
+  li img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// -------------------   section Value we provide ---------------------------
+.valueWeProvide {
+  padding: 80px 80px 160px 100px;
+  h1 {
+    @include headingDark;
+  }
+  p {
+    @include paraDark;
+    margin-bottom: 68px;
+  }
+}
+
+// -------------------   section Why Prism ---------------------------
+.whyPrism {
+  height: 769px;
+  background: #1760a6 0% 0% no-repeat padding-box;
+  margin-bottom: 160px;
+  padding: 40px 80px 160px 100px;
+  background: transparent url("../../Assets/hero-background.svg") 0% 0%
+    no-repeat padding-box;
+    h1{
+      @include headingLight;
+    }
+    p{
+      @include paraLight;
+      line-height: 50px;
+    }
+    .graph{
+      align-self: center;
+      width: 367px;
+    }
 }

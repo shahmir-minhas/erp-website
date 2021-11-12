@@ -13,12 +13,13 @@ const CardPrimary = (props) => {
 
         <h4>{props.title}</h4>
         <p>{props.body}</p>
-        <Link to={props.link}>
-          learn more{" "}
+        {props.link?  <Link to={props.link}>
+          learn more
           <span>
             <Path />
-          </span>{" "}
-        </Link>
+          </span>
+        </Link> : null}
+       
       </div>
     </div>
   );

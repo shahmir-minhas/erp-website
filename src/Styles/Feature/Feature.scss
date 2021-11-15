@@ -1,0 +1,96 @@
+@mixin heading-h1-dark {
+  font-size: 40px;
+  color: #041424;
+  font-weight: bold;
+}
+
+.feature-wrapper {
+  padding-left: 100px;
+  padding-top: 80px;
+  padding-right: 100px;
+  .comprehensiveOverview {
+    padding-bottom: 80px;
+    a {
+      color: #1760a6;
+      font-size: 16px;
+    }
+
+    h1:first-child {
+      color: #c5c5c5;
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    h1:nth-child(2) {
+      color: #1760a6;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .card-container {
+      flex-wrap: wrap;
+      padding-left: 100px;
+    }
+  }
+
+  // -------------- Break Down Dashboad Feature Css ----------------
+
+  .dashboardFeature {
+    padding-top: 80px;
+    h1 {
+     @include heading-h1-dark;
+    }
+    .ant-tabs {
+      margin-top: 40px;
+
+      .ant-tabs-nav-wrap {
+        justify-content: center;
+        .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            padding-bottom: 6px;
+          }
+
+          .ant-tabs-tab-btn {
+            color: #818181;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .ant-tabs-tab-active {
+            color: #1760a6 !important;
+            border-bottom: #1760a6 !important;
+          }
+        }
+      }
+
+      .ant-tabs-nav::before {
+        border-bottom: none;
+      }
+
+      .ant-tabs-content {
+        height: 500px;
+      }
+    }
+  }
+
+}
+// -------------- Break Down Dashboad Feature Css ----------------
+.videoGallery {
+  padding: 161px 50px 180px 50px;
+
+  h1{
+    @include heading-h1-dark;
+  }
+  .sliderVideoHolder {
+    background-color: grey;
+    height: 319px;
+    width: 356px;
+    margin: 10px ;
+    border-radius: 4px;
+  }
+  .slick-arrow{
+    height: 35px;
+    width: 35px;
+    background: transparent url('../../Assets/Icons/Group 2579.png') 0% 0% no-repeat padding-box;
+    margin: 0 35px;
+  }
+}

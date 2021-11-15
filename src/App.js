@@ -5,9 +5,9 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Index from "./Pages/Dashboard/index";
 import AboutUs from "./Pages/About Us/about-us";
 import Layout from "./Layout/index";
-import Features from "./Pages/Features/features";
-import PricingPlan from "./Pages/Pricing Plan/pricingPlan";
-import ContactUs from "./Pages/Contact Us/contactUs";
+import Features from "./Pages/Features/Features";
+import PricingPlan from "./Pages/Pricing Plan/PricingPlan";
+import ContactUs from "./Pages/Contact Us/ContactUs";
 
 function App() {
   return (

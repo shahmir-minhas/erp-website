@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
-import "../../Styles/About Us/aboutUs.scss";
+
 import CardPrimary from "./../../Components/Common/Card Primary/cardPrimary";
 import Sketch from "../../Assets/sketch.png";
 import Box from "../../Assets/boxes.png";
 import Graph from "../../Assets/graph.png";
 import CheckMarkBlue from "../../Assets/Icons/checkMarkBlu.png";
+
+import "../../Styles/About Us/aboutUs.scss";
 
 const AboutUs = () => {
   const visionCard = [

@@ -1,0 +1,131 @@
+$headingLight: #ffffff;
+$headingDark: #041424;
+$headingFont: 40px;
+
+$paraFontSize: 16px;
+$paraLight: #ffffff;
+$paraDark: #747474;
+
+$currentBreadCrumb: #d4d4d4;
+
+@mixin headingDark {
+  font-size: $headingFont;
+  color: $headingDark;
+}
+@mixin headingLight {
+  font-size: $headingFont;
+  color: $headingLight;
+}
+
+@mixin paraDark {
+  font-size: $paraFontSize;
+  color: $paraDark;
+}
+
+@mixin paraLight {
+  font-size: $paraFontSize;
+  color: $paraLight;
+}
+
+// -------------------  Contact us section ---------------------------
+.contact-us {
+  background: transparent url("../../Assets/hero-background.svg") 0% 0%
+    no-repeat padding-box;
+  background-size: cover;
+  height: 433px;
+  padding-top: 119px;
+  padding-left: 100px;
+
+  h1 {
+    @include headingLight;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  p {
+    @include paraLight;
+    margin-bottom: 0;
+  }
+  hr {
+    background-color: $paraLight;
+    border: 1px solid #ffffff;
+    width: 179px;
+    opacity: 1;
+    margin-top: 6px;
+  }
+  .ant-breadcrumb-link,
+  .ant-breadcrumb-separator {
+    color: $headingLight;
+  }
+  .ant-breadcrumb-link a {
+    color: $currentBreadCrumb !important;
+    font-size: 16px;
+  }
+}
+.contact-container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 12px #8a8a8a29;
+  height: 778px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-radius: 4px;
+  width: 1160px;
+  // display: block;
+
+  .contact-form{
+      padding-top: 36px;
+      padding-left: 23px;
+    
+      h3 {
+        font-size: 24px;
+        color: #041424;
+        font-weight: bold;
+      }
+      label {
+        color: #041424;
+        font-size: 14px;
+      }
+      input {
+        background: #ffffff 0% 0% no-repeat padding-box !important;
+        border: 1px solid #d2d2d2 !important;
+        border-radius: 4px !important;
+        width: 100% !important;
+        height: 48px !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
+      }
+      .text-area {
+        width: 100% !important;
+        height: 98px !important;
+        background: #ffffff 0% 0% no-repeat padding-box !important;
+        border: 1px solid #d2d2d2 !important;
+        border-radius: 4px !important;
+      }
+      .reset-btn {
+        padding: 0 !important;
+        width: 12% !important;
+        margin-left: auto !important;
+        border: none !important;
+      }
+      .btn-submit {
+        background: #165fa6 0% 0% no-repeat padding-box !important;
+        border-radius: 2px !important;
+        background-color: #165fa6 !important;
+        color: #ffffff !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
+      }
+    }
+  .information{
+    background: #F1F8FF 0% 0% no-repeat padding-box;
+    padding-top: 36px;
+    padding-right: 116px;
+    padding-left: 67px;
+    color:#165FA6;
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color:#165FA6;
+      }
+
+  }
+}

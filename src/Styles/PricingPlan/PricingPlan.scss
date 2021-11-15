@@ -1,0 +1,100 @@
+$headingLight: #ffffff;
+$headingDark: #041424;
+$headingFont: 40px;
+
+$paraFontSize: 16px;
+$paraLight: #ffffff;
+$paraDark: #747474;
+
+$currentBreadCrumb: #d4d4d4;
+
+@mixin headingDark {
+  font-size: $headingFont;
+  color: $headingDark;
+  font-weight: bold;
+}
+@mixin headingLight {
+  font-size: $headingFont;
+  color: $headingLight;
+}
+
+@mixin paraDark {
+  font-size: $paraFontSize;
+  color: $paraDark;
+}
+
+@mixin paraLight {
+  font-size: $paraFontSize;
+  color: $paraLight;
+}
+.pricing-plan-top {
+  background: transparent url("../../Assets/hero-background.svg") 0% 0%
+    no-repeat padding-box;
+  background-size: cover;
+  height: 433px;
+  padding-top: 119px;
+  padding-left: 100px;
+  h1 {
+    @include headingLight;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  p {
+    @include paraLight;
+    font-size: 20px;
+  }
+  hr {
+    background-color: $paraLight;
+    border: 1px solid #ffffff;
+    width: 179px;
+    opacity: 1;
+  
+  }
+  a:nth-child(2) {
+    color: $paraLight;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  .ant-breadcrumb-link,
+  .ant-breadcrumb-separator {
+    color: $headingLight;
+  }
+  .ant-breadcrumb-link a {
+    color: $currentBreadCrumb !important;
+    font-size: 16px;
+  }
+}
+.pricingPlan-wrapper {
+  
+  padding: 580px 100px 160px 100px;
+  h1 {
+    @include headingDark;
+  }
+  p {
+    @include paraDark;
+  }
+  // .panel{
+
+  // }
+  .site-collapse-custom-collapse {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 20px #cbcbcb29;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    
+    .ant-collapse-header{
+        font-size: 16px;
+        font-weight: bold;
+        color: #041424;
+    }
+    p{
+        font-size: 14px;
+        color: #041424;
+    }
+    .ant-collapse-content {
+        padding-left: 26px;
+        padding-right: 50px;
+    }
+  }
+
+}

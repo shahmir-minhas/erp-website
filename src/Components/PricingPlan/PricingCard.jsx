@@ -3,6 +3,7 @@ import Breifcase from "../../Assets/Icons/Group 8.png";
 import "../../Styles/PricingCards.scss";
 import CheckMarkIcon from "../../Assets/Icons/Icon material-check.svg";
 import CheckMarkIconGrey from "../../Assets/Icons/Icon material-check Grey.svg";
+import { Link } from 'react-router-dom';
 
 const PricingCard = ({ data }) => {
   // console.log('props', props);
@@ -43,9 +44,10 @@ const PricingCard = ({ data }) => {
             </li>
           ))}
         </ul>
+        <Link to="/pricing-plan/contact-information"> 
         <button className={`${isActive ? "btn-active" : ""}`}>
           Choose Plan
-        </button>
+        </button></Link>
       </div>
     </React.Fragment>
   );

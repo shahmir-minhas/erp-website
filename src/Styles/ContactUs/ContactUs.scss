@@ -68,64 +68,100 @@ $currentBreadCrumb: #d4d4d4;
   margin-top: 50px;
   margin-bottom: 100px;
   border-radius: 4px;
-  width: 1160px;
-  // display: block;
+  width: 90%;
+  padding-left: 23px;
 
-  .contact-form{
-      padding-top: 36px;
-      padding-left: 23px;
-    
-      h3 {
-        font-size: 24px;
-        color: #041424;
-        font-weight: bold;
-      }
-      label {
-        color: #041424;
-        font-size: 14px;
-      }
-      input {
-        background: #ffffff 0% 0% no-repeat padding-box !important;
-        border: 1px solid #d2d2d2 !important;
-        border-radius: 4px !important;
-        width: 100% !important;
-        height: 48px !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
-      }
-      .text-area {
-        width: 100% !important;
-        height: 98px !important;
-        background: #ffffff 0% 0% no-repeat padding-box !important;
-        border: 1px solid #d2d2d2 !important;
-        border-radius: 4px !important;
-      }
-      .reset-btn {
-        padding: 0 !important;
-        width: 12% !important;
-        margin-left: auto !important;
-        border: none !important;
-      }
-      .btn-submit {
-        background: #165fa6 0% 0% no-repeat padding-box !important;
-        border-radius: 2px !important;
-        background-color: #165fa6 !important;
-        color: #ffffff !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
+  .contact-form {
+    padding: 36px 24px 74px 0;
+    width: 59%;
+
+    h3 {
+      font-size: 24px;
+      color: #041424;
+      font-weight: bold;
+    }
+    label {
+      color: #041424;
+      font-size: 14px;
+    }
+    input {
+      background: #ffffff 0% 0% no-repeat padding-box !important;
+      border: 1px solid #d2d2d2 !important;
+      border-radius: 4px !important;
+      width: 100% !important;
+      height: 48px !important;
+      font-size: 16px !important;
+      font-weight: bold !important;
+      width: 100%;
+    }
+    .ant-select-selector {
+      height: 45px;
+      padding: 0;
+      position: relative;
+      border: none;
+      .ant-select-selection-search{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        // border: none;
       }
     }
-  .information{
-    background: #F1F8FF 0% 0% no-repeat padding-box;
-    padding-top: 36px;
-    padding-right: 116px;
-    padding-left: 67px;
-    color:#165FA6;
-    h3 {
-        font-size: 24px;
-        font-weight: bold;
-        color:#165FA6;
-      }
 
+    .text-area {
+      width: 100% !important;
+      height: 98px !important;
+      background: #ffffff 0% 0% no-repeat padding-box !important;
+      border: 1px solid #d2d2d2 !important;
+      border-radius: 4px !important;
+    }
+    .reset-btn {
+      padding: 0 !important;
+      width: 15% !important;
+      margin-left: auto !important;
+      border: none !important;
+    }
+    .btn-submit {
+      background: #165fa6 0% 0% no-repeat padding-box !important;
+      border-radius: 2px !important;
+      background-color: #165fa6 !important;
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: bold !important;
+    }
   }
+  .information {
+    background: #f1f8ff 0% 0% no-repeat padding-box;
+    padding: 36px 116px 0 67px;
+    color: #165fa6;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 778px;
+
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #165fa6;
+    }
+    p {
+      font-size: 20px;
+      color: #165fa6;
+    }
+    // contact information icons
+    .ci-icon-location {
+      width: 19px;
+      height: 31px;
+    }
+    .ci-icon-phone {
+      width: 27px;
+      height: 30px;
+    }
+    .ci-icon-mail {
+      width: 25px;
+      height: 20px;
+    }
+  }
+}
+.spacer {
+  height: 850px;
 }

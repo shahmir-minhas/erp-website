@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../../../Styles/hero.scss";
 import Button from "./../../Common/Button/button";
 import PlayIcon from "../../../Assets/Icons/play-button-o.png";
-import ChatIcon from "../../../Assets/Icons/chat.png";
+
 
 const Hero = () => {
   return (
@@ -36,9 +36,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="messenger justify-item-center">
-          <img src={ChatIcon} alt="" />
-        </div>
+        
       </section>
     </React.Fragment>
   );

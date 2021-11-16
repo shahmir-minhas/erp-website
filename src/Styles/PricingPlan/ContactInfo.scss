@@ -1,0 +1,151 @@
+$headingLight: #ffffff;
+$headingDark: #041424;
+$headingFont: 40px;
+
+$paraFontSize: 16px;
+$paraLight: #ffffff;
+$paraDark: #747474;
+
+$currentBreadCrumb: #d4d4d4;
+
+@mixin headingDark {
+  font-size: $headingFont;
+  color: $headingDark;
+  font-weight: bold;
+}
+@mixin headingLight {
+  font-size: $headingFont;
+  color: $headingLight;
+}
+
+@mixin paraDark {
+  font-size: $paraFontSize;
+  color: $paraDark;
+}
+
+@mixin paraLight {
+  font-size: $paraFontSize;
+  color: $paraLight;
+}
+
+.contact-info-wrapper {
+  background: transparent linear-gradient(180deg, #1288d6 0%, #239beb 100%) 0%
+    0% no-repeat padding-box;
+  background: transparent url("../../Assets/hero-background.svg") 0% 0%
+    no-repeat padding-box;
+  //   height: 769px;
+  padding: 119px 106px 22px 100px;
+  h1 {
+    @include headingLight;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  p {
+    @include paraLight;
+    font-size: 20px;
+  }
+  hr {
+    background-color: $paraLight;
+    border: 1px solid #ffffff;
+    width: 179px;
+    opacity: 1;
+  }
+
+  a:nth-child(2) {
+    color: $paraLight;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  .ant-breadcrumb-link,
+  .ant-breadcrumb-separator {
+    color: $headingLight;
+  }
+  .ant-breadcrumb-link a {
+    color: $currentBreadCrumb !important;
+    font-size: 16px;
+  }
+  .contact-info {
+    margin-top: 35px;
+
+    a {
+      font-size: 16px;
+      color: #ffffff;
+      margin-bottom: 21px;
+      display: block;
+    }
+    .contact-info-form {
+      width: 778px;
+      //   height: 100%;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 6px 12px #8a8a8a29;
+      border-radius: 4px;
+      padding: 36px 32px 24px 30px;
+      .ant-steps-item-active {
+        .ant-steps-item-icon {
+          background-color: #1760a6;
+          border: 1px solid #1760a6;
+        }
+      }
+      .ant-steps-item-finish {
+        .ant-steps-item-icon {
+          background-color: #1760a6;
+          border: #1760a6;
+          .ant-steps-icon {
+            color: #ffffff;
+          }
+        }
+      }
+      .ant-steps-item-wait {
+        .ant-steps-item-icon {
+          border: 1px dashed #1760a6;
+          .ant-steps-icon {
+            color: #1760a6;
+          }
+        }
+      }
+      .ant-steps-item-tail {
+        color: #1760a6;
+      }
+
+      .ant-steps-item-title {
+        font-size: 14px;
+        color: #1760a6;
+      }
+
+      .steps-action {
+          .ant-btn{
+            border: 1px solid #1760A6;
+            color: #1760A6;
+          }
+          .ant-btn-primary{
+            background: #1760A6 0% 0% no-repeat padding-box;
+            border: 1px solid #1760A6;
+            color: #ffffff;
+          }
+        button {
+          //   width: 83px;
+          height: 42px;
+          padding: 10px 24px;
+        //   background: #1760a6 0% 0% no-repeat padding-box;
+        //   border: 1px solid #1760a6;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+  .order-summary {
+    margin-top: 35px;
+    .order-summary-card {
+      width: 358px;
+      height: 534px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 6px 12px #8a8a8a29;
+      border-radius: 4px;
+      padding: 16px 21px 16px 16px;
+      p {
+        color: #041720;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Breadcrumb, Switch, Collapse } from "antd";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,8 @@ import PricingCard from "../../Components/PricingPlan/PricingCard";
 const { Panel } = Collapse;
 
 const PricingPlan = () => {
+
+  const [switchState, setswitchState] = useState(true);
   // frequently asked question
   const askedQuestions = [
     {
@@ -99,7 +101,9 @@ const PricingPlan = () => {
       isActive: false,
     },
   ];
-
+const handleSwitch = (check) =>{
+    setswitchState(check);
+};
   return (
     <React.Fragment>
       <section className="pricing-plan-top text-center">
@@ -118,14 +122,14 @@ const PricingPlan = () => {
           Starter, Business & Enterprise Plans.
         </p>
         <p>
-          Monthly <Switch className="" defaultChecked /> Yearly 
-          <Link className="ms-1">Save 30%</Link>
+          Monthly <Switch className="" defaultChecked onChange={handleSwitch} /> Yearly 
+          {switchState?<Link className="ms-1">Save 30%</Link>:null}
         </p>
 
         {/* handling 
             Pricing cards 
                     here */}
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="d-flex flex-wrap justify-content-center align-items-center">
           {pricingCards.map((card) => (
             <PricingCard data={card} />
           ))}
@@ -161,4 +165,4 @@ const PricingPlan = () => {
   );
 };
 
-export default PricingPlan;
+export default PricingPlan;      

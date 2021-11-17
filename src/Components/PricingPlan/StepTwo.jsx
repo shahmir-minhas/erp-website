@@ -91,7 +91,7 @@ const StepTwo = () => {
                 // showArrow={false}
               >
                 {businessType.map((list) => (
-                  <Option value={list}>{list}</Option>
+                  <Option key={list} value={list}>{list}</Option>
                 ))}
               </Select>
             </div>

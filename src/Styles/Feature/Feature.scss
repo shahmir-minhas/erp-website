@@ -27,6 +27,9 @@
       font-weight: bold;
       margin-top: 0;
     }
+    p {
+      color: #747474;
+    }
     .card-container {
       flex-wrap: wrap;
       padding-left: 100px;
@@ -38,7 +41,7 @@
   .dashboardFeature {
     padding-top: 80px;
     h1 {
-     @include heading-h1-dark;
+      @include heading-h1-dark;
     }
     .ant-tabs {
       margin-top: 40px;
@@ -56,8 +59,11 @@
             font-weight: bold;
           }
           .ant-tabs-tab-active {
-            color: #1760a6 !important;
-            border-bottom: #1760a6 !important;
+            // border-bottom: 1px solid #1760a6;
+
+            .ant-tabs-tab-btn {
+              color: #1760a6;
+            }
           }
         }
       }
@@ -71,26 +77,50 @@
       }
     }
   }
-
 }
 // -------------- Break Down Dashboad Feature Css ----------------
 .videoGallery {
-  padding: 161px 50px 180px 50px;
+  padding: 161px 0 180px 0;
 
-  h1{
+  h1 {
     @include heading-h1-dark;
   }
-  .sliderVideoHolder {
-    background-color: grey;
-    height: 319px;
-    width: 356px;
-    margin: 10px ;
-    border-radius: 4px;
+  p {
+    color: #747474;
   }
-  .slick-arrow{
-    height: 35px;
-    width: 35px;
-    background: transparent url('../../Assets/Icons/Group 2579.png') 0% 0% no-repeat padding-box;
-    margin: 0 35px;
+  .video-slider {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    // z-index: 1;
+
+    .sliderVideoHolder {
+      background-color: grey;
+      height: 319px;
+      width: 356px;
+      margin-left: 30px;
+      border-radius: 4px;
+    }
+    .slick-arrow {
+      height: 35px;
+      width: 35px;
+      margin: 0 35px;
+    }
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      left: -80px;
+      background: transparent url("../../Assets/Icons/Group 2579.png") 0% 0%
+        no-repeat padding-box;
+        // z-index: 1;
+    }
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      right: -80px;
+      background: transparent url("../../Assets/Icons/Component 39 – 1.png") 0%
+        0% no-repeat padding-box;
+        // z-index: 1;
+    }
   }
 }

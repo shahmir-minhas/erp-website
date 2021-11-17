@@ -27,7 +27,10 @@ $currentBreadCrumb: #d4d4d4;
   font-size: $paraFontSize;
   color: $paraLight;
 }
-
+.spacer {
+  height: 160px;
+  width: 100%;
+}
 .contact-info-wrapper {
   background: transparent linear-gradient(180deg, #1288d6 0%, #239beb 100%) 0%
     0% no-repeat padding-box;
@@ -44,6 +47,7 @@ $currentBreadCrumb: #d4d4d4;
   p {
     @include paraLight;
     font-size: 20px;
+    margin-bottom: 14px;
   }
   hr {
     background-color: $paraLight;
@@ -114,23 +118,36 @@ $currentBreadCrumb: #d4d4d4;
       }
 
       .steps-action {
-          .ant-btn{
-            border: 1px solid #1760A6;
-            color: #1760A6;
-          }
-          .ant-btn-primary{
-            background: #1760A6 0% 0% no-repeat padding-box;
-            border: 1px solid #1760A6;
-            color: #ffffff;
-          }
+        .ant-btn {
+          border: 1px solid #1760a6;
+          color: #1760a6;
+        }
+        .ant-btn-primary {
+          background: #1760a6 0% 0% no-repeat padding-box;
+          border: 1px solid #1760a6;
+          color: #ffffff;
+        }
         button {
           //   width: 83px;
           height: 42px;
           padding: 10px 24px;
-        //   background: #1760a6 0% 0% no-repeat padding-box;
-        //   border: 1px solid #1760a6;
+          //   background: #1760a6 0% 0% no-repeat padding-box;
+          //   border: 1px solid #1760a6;
           border-radius: 2px;
         }
+      }
+    }
+    .notify {
+      background-color: #daebfc;
+      width: 368px;
+      height: 43px;
+      background: #daebfc 0% 0% no-repeat padding-box;
+      border-radius: 4px;
+      padding-left: 10px;
+      padding-top: 12px;
+      p {
+        font-size: 14px;
+        color: #1760a6;
       }
     }
   }
@@ -142,10 +159,109 @@ $currentBreadCrumb: #d4d4d4;
       background: #ffffff 0% 0% no-repeat padding-box;
       box-shadow: 0px 6px 12px #8a8a8a29;
       border-radius: 4px;
-      padding: 16px 21px 16px 16px;
+      padding-top: 1px;
+
       p {
         color: #041720;
       }
+      p:nth-child(2) {
+        font-size: 20px;
+        font-weight: bold;
+
+        span:nth-child(1) {
+          color: #ababab;
+          font-size: 12px;
+        }
+        span:nth-child(3) {
+          color: #1760a6;
+          font-size: 14px;
+        }
+      }
+      h5 {
+        font-weight: bold;
+        font-size: 20px;
+        color: #041720;
+      }
+      h6 {
+        color: #041720;
+        font-size: 16px;
+        letter-spacing: 0px;
+      }
+      hr {
+        border: 1px solid #e8e8e8;
+        width: 100%;
+        background-color: #e8e8e8;
+        margin: 12px 0;
+      }
+      li {
+        color: #041720;
+        font-size: 16px;
+        margin-bottom: 10px;
+        img {
+          margin-right: 5px;
+        }
+      }
+      .card-padding {
+        padding: 0px 21px 0px 16px;
+      }
+      .card-padding-summary {
+        padding: 0px 21px 0px 16px;
+      }
+      .pricing-summary {
+        background: #f6f6f6 0% 0% no-repeat padding-box;
+        border: 1px dashed #c9c9c9;
+        border-radius: 4px;
+        padding: 16px 22px 0 22px;
+        hr {
+          margin: 0;
+          margin-bottom: 18px;
+        }
+        li {
+          font-size: 16px;
+          color: #041720;
+          margin: 0;
+          p {
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 14px;
+          }
+        }
+        li:last-child {
+          font-weight: bold;
+          p {
+            font-weight: bold;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+.ant-modal {
+  width: 70% !important;
+  .modal-congrats {
+    padding: 30px;
+    img {
+      margin-bottom: 36px;
+    }
+    h4 {
+      color: #1760a6;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 20px;
+      color: #292929;
+      margin-top: 44px;
+      margin-bottom: 44px;
+    }
+    button {
+      width: 358px;
+      height: 48px;
+      background: #1760a6 0% 0% no-repeat padding-box;
+      border-radius: 4px;
+      font-size: 16px;
+      color: #ffffff;
     }
   }
 }

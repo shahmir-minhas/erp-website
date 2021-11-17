@@ -63,11 +63,12 @@ const Features = () => {
 
   const settings = {
     // className: "center",
-    // centerMode: true,
+    centerMode: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
+    centerPadding: "0px",
   };
 
   return (
@@ -105,10 +106,10 @@ const Features = () => {
               without worrying about.
             </p>
             <Link>
-              Explore All{" "}
+              Explore All
               <span>
                 <img src={PathBlue} alt="" />
-              </span>{" "}
+              </span>
             </Link>
           </div>
           <div className="col-8">
@@ -147,27 +148,28 @@ const Features = () => {
           All the features of the prism is shown in animated video. So you can
           easily know how the different feature of the prism works
         </p>
-
-        <Slider {...settings}>
-          <div>
-            <div className="sliderVideoHolder"></div>
-          </div>
-          <div>
-            <div className="sliderVideoHolder"></div>
-          </div>
-          <div>
-            <div className="sliderVideoHolder"></div>
-          </div>
-          <div>
-            <div className="sliderVideoHolder"></div>
-          </div>
-          <div>
-            <div className="sliderVideoHolder"></div>
-          </div>
-          <div>
-            <div className="sliderVideoHolder"></div>
-          </div>
-        </Slider>
+        <div className="video-slider">
+          <Slider {...settings}>
+            <div>
+              <div className="sliderVideoHolder"></div>
+            </div>
+            <div>
+              <div className="sliderVideoHolder"></div>
+            </div>
+            <div>
+              <div className="sliderVideoHolder"></div>
+            </div>
+            <div index={4}>
+              <div className="sliderVideoHolder"></div>
+            </div>
+            {/* <div>
+              <div className="sliderVideoHolder"></div>
+            </div>
+            <div>
+              <div className="sliderVideoHolder"></div>
+            </div> */}
+          </Slider>
+        </div>
       </section>
     </React.Fragment>
   );

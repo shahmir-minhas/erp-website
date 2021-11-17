@@ -1,19 +1,24 @@
-import React, { Component } from "react";
-import { Breadcrumb, Switch, Steps, Button, message } from "antd";
+import React, { Component, useState } from "react";
+import { Breadcrumb, Switch, Steps, Button, message, Modal } from "antd";
 import { Link } from "react-router-dom";
 
 import StepOne from "../../Components/PricingPlan/StepOne";
 import StepTwo from "../../Components/PricingPlan/StepTwo";
 import StepThree from "../../Components/PricingPlan/StepThree";
 import StepFour from "../../Components/PricingPlan/StepFour";
-// import '../../Styles/PricingPlan/PricingPlan.scss';
+import CheckMark from "../../Assets/Icons/checkMark-OrderSummary.svg";
+import Congratulation from "../../Assets/Group 2600.png";
+
 import "../../Styles/PricingPlan/ContactInfo.scss";
 
 const ContactInformation = () => {
   const { Step } = Steps;
+  // Hooks
+  const [current, setCurrent] = useState(0);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [switchState, setswitchState] = useState(true);
 
-  const [current, setCurrent] = React.useState(0);
-  const [switchState, setswitchState] = React.useState(true);
+  // objects
   const steps = [
     {
       title: "Contact Information",
@@ -29,6 +34,9 @@ const ContactInformation = () => {
     },
   ];
 
+  // Methods
+
+  // ---------- handling Stepper here --------------------
   const next = () => {
     setCurrent(current + 1);
   };
@@ -36,15 +44,56 @@ const ContactInformation = () => {
   const prev = () => {
     setCurrent(current - 1);
   };
-  const form = () => {
-    return <div>i am form 1</div>;
-  };
-  const handleSwitch = (check) =>{
+
+  // ---------- handling Switch here --------------------
+  const handleSwitch = (check) => {
     setswitchState(check);
-};
+  };
+
+  // ---------- handling model methods here --------------------
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
 
   return (
     <React.Fragment>
+      {/* 
+            Modal 
+      */}
+      <Modal
+        // title="Basic Modal"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={null}
+      >
+        <div className="modal-congrats text-center">
+          <img src={Congratulation} alt="" />
+          <h4>Your Transaction is Successful</h4>
+          <p>
+            You have successfully subscribed to our "Business Plan". Your
+            credentials has been sent to your email address{" "}
+            <strong>bilal@gmail.com</strong>
+          </p>
+          <Link to="/">
+            <button>Go Home</button>
+          </Link>
+        </div>
+      </Modal>
+
+      {/* 
+          Contact Stepper Code 
+      */}
+
       <div className="contact-info-wrapper">
         <Breadcrumb>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
@@ -78,67 +127,120 @@ const ContactInformation = () => {
                   ) : steps[current] === steps[3] ? (
                     <StepFour />
                   ) : null}
-                </form>
-              </div>
+                  <div className="steps-action d-flex justify-content-between">
+                    {steps[current] === steps[0] ? (
+                      <div className="notify justify-content-center">
+                        <p>
+                          Note : Please fill all the details to confirm your
+                          payment
+                        </p>
+                      </div>
+                    ) : (
+                      <div> </div>
+                    )}
 
-              <div className="steps-action d-flex justify-content-between">
-                <div>note</div>
-                <div>
-                  {current > 0 && (
-                    <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
-                      Back
-                    </Button>
-                  )}
-                  {current < steps.length - 1 && (
-                    <Button type="primary" onClick={() => next()}>
-                      Next
-                    </Button>
-                  )}
-                  {current === steps.length - 1 && (
-                    <Button
-                      type="primary"
-                      onClick={() => message.success("Processing complete!")}
-                    >
-                      Confirm Payment
-                    </Button>
-                  )}
-                </div>
+                    <div>
+                      {current > 0 && (
+                        <Button
+                          style={{ margin: "0 8px" }}
+                          onClick={() => prev()}
+                        >
+                          Back
+                        </Button>
+                      )}
+                      {current < steps.length - 1 && (
+                        <Button type="primary" onClick={() => next()}>
+                          Next
+                        </Button>
+                      )}
+                      {current === steps.length - 1 && (
+                        <Button type="primary" onClick={showModal}>
+                          Confirm Payment
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
 
           <div className="order-summary">
             <p>
-              Monthly <Switch className="" defaultChecked onChange={handleSwitch}/> Yearly
-              {switchState?<Link className="ms-1">Save 30%</Link>:null}
+              Monthly
+              <span className="mx-1">
+                <Switch className="" defaultChecked onChange={handleSwitch} />
+              </span>
+              Yearly
+              {switchState ? (
+                <Link to="/pricing-plan" className="ms-1">
+                  Save 30%
+                </Link>
+              ) : null}
             </p>
+
             <div className="order-summary-card">
-              <h4>Order Summary</h4>
-              <hr />
-              <div className="d-flex justify-content-lg-between">
-                <h4>Business</h4>
-                <p>
-                  DAR 250 / year <br /> <span>you save 10%</span>
-                </p>
+              <div className="card-padding">
+                <h5 className="mt-3">Order Summary</h5>
               </div>
               <hr />
-              <h6>Feature included in business plan.</h6>
-              <ul>
-                <li>aaaa</li>
-                <li>aaaa</li>
-                <li>aaaa</li>
-                <li>aaaa</li>
-                <li>aaaa</li>
-              </ul>
+              <div className="card-padding">
+                <div className="d-flex justify-content-between text-end">
+                  <h5 className="m-0">Business</h5>
+                  <p className="m-0">
+                    SAR 250 <span>/ year</span> <br /> <span>You save 10%</span>
+                  </p>
+                </div>
+              </div>
               <hr />
-              <div>price summary</div>
+              <div className="card-padding-summary ">
+                <h6>Feature included in business plan.</h6>
+                <ul className="list-unstyled">
+                  <li>
+                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                  </li>
+                  <li>
+                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                  </li>
+                  <li>
+                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                  </li>
+                  <li>
+                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                  </li>
+                </ul>
+
+                <hr />
+                <div className="card-padding pricing-summary">
+                  <h6>Price summary</h6>
+                  <hr />
+                  <ul className="list-unstyled m-0">
+                    <li>
+                      <div className="d-flex justify-content-between">
+                        <p>Plan Price</p>
+                        <p>SAR 250</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="d-flex justify-content-between">
+                        <p>VAT Total</p>
+                        <p>SAR 10</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="d-flex justify-content-between">
+                        <p>VAT Total</p>
+                        <p>SAR 10</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="spacer">
-
-      </div>
+      <div className="spacer"></div>
     </React.Fragment>
   );
 };

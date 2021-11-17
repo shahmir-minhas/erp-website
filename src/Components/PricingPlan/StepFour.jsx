@@ -7,6 +7,7 @@ import QuestionIcon from "../../Assets/Icons/Icon awesome-question-circle.png";
 const StepFour = () => {
   const [SwitchState, setSwitchState] = useState("On");
 
+
   function onChange(date, dateString) {
     console.log(date, dateString);
   }
@@ -42,7 +43,7 @@ const StepFour = () => {
               Expire Date
             </label>
             <br />
-            <DatePicker onChange={onChange} />
+            <DatePicker onChange={onChange}/>
           </div>
 
           <div className="mb-4 cvc-input">

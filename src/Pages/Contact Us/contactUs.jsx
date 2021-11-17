@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, useState} from "react";
 import { Breadcrumb,Input, Select } from "antd";
 import { Link } from "react-router-dom";
+
 import PhoneInput from "./../../Components/Common/PhoneNumber/phoneInput";
-import "../../Styles/ContactUs/ContactUs.scss";
 import LocationIcon from "../../Assets/Icons/Icon metro-location.png";
 import Phone from "../../Assets/Icons/Icon material-phonelink-ring.png";
 import Mail from "../../Assets/Icons/Icon material-email.png";
+import "../../Styles/ContactUs/ContactUs.scss";
 
 const ContactUs = () => {
   const { Option } = Select;
+  const [formSubmit, setfromSubmit] = useState();
   const country = [
     "Pakitsan",
     "USA",
@@ -39,8 +41,8 @@ const ContactUs = () => {
           If you have any queries in your mind please send us a message or email
           us which is given below.
         </p>
-        <section className="contact-container justify-content-center text-start">
-        <div className="d-flex justify-content-lg-between">
+        <section className="contact-container justify-content-center text-start me-auto">
+        <div className="d-flex justify-content-between">
           <div className=" contact-form">
             <h3>Contact Us</h3>
 
@@ -160,7 +162,7 @@ const ContactUs = () => {
       </section>
       </section>
 
-     <div className="spacer">
+     <div className="spacer-contact">
 
      </div>
     </React.Fragment>

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 import PathBlue from "../../Assets/Icons/Path 1001.png";
-import CardTernary from "./../../Components/Feature/CardsTernary";
 import Sales from "../../Assets/Icons/sales.png";
 import Account from "../../Assets/Icons/account.png";
+import CardTernary from "./../../Components/Feature/CardsTernary";
 import Group from "../../Assets/Icons/group.png";
 import HelpDesk from "../../Assets/Icons/help-desk.png";
 import Gold from "../../Assets/Icons/gold.png";

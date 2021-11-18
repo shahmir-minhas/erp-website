@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Modal, Select,Input  } from "antd";
+import { Modal, Select, Input, Form } from "antd";
 import "../../../Styles/modalForm.scss";
 import PhoneInput from "../../Common/PhoneNumber/phoneInput";
 
@@ -62,40 +62,63 @@ const ReqDemoForm = () => {
         <h5>Request Demo Form</h5>
         <p>For the prism demo fill the details below to get your demo.</p>
 
-        <form action="" className="needs-validation">
+        {/* <form action="" className="needs-validation"> */}
+        <Form
+        // name="basic"
+        // labelCol={{ span: 8 }}
+        // wrapperCol={{ span: 16 }}
+        // initialValues={{ remember: true }}
+        // onFinish={onFinish}
+        // onFinishFailed={onFinishFailed}
+        // autoComplete="off"
+        >
           <div className="row">
             <div className="col">
               <div className="mb-3 ">
                 <label for="userName" className="form-label">
                   Full Name
                 </label>
-                <Input placeholder="Shahmir Minhas" />
-                {/* <input
-                  type="text"
-                  className="form-control"
-                  id="userName"
-                  placeholder="Shahmir Minhas"
-                /> */}
-                <div className="invalid-feedback">
-                  Please enter a correct User Name.
-                </div>
+                <Form.Item
+                  name="userName"
+                  rules={[
+                    { required: true, message: "Please input your username!" },
+                  ]}
+                >
+                  <Input placeholder="Shahmir Minhas" />
+                </Form.Item>
               </div>
               <div className="mb-3">
                 <label for="mobileNumber" className="form-label">
                   Mobile Number
                 </label>
-                <PhoneInput/>
-                <div className="invalid-feedback">
-                  Please enter a correct Mobile Number.
-                </div>
+                <Form.Item
+                  name="phoneNumber"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please provide your Phone number!",
+                    },
+                  ]}
+                >
+                  <PhoneInput />
+                </Form.Item>
               </div>
+
               <div className="mb-3">
                 <label for="company" className="form-label">
                   Company
                 </label>
-                <Input placeholder="Company" />
-                {/* <input type="text" className="form-control" id="company" /> */}
-                <div className="invalid-feedback">Please enter Compnay Name.</div>
+                <Form.Item
+                  name="phoneNumber"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please provide your Phone number!",
+                    },
+                  ]}
+                >
+                  <Input placeholder="Company" />
+                </Form.Item>
               </div>
             </div>
 
@@ -104,22 +127,33 @@ const ReqDemoForm = () => {
                 <label for="email" className="form-label">
                   Email
                 </label>
-                <Input placeholder="example@gmial.com" />
-                {/* <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  placeholder="name@example.com"
-                /> */}
-                <div className="invalid-feedback">
-                  Please enter a correct Email.
-                </div>
+                <Form.Item
+                  name="email"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please provide email!",
+                      type: "email",
+                    },
+                  ]}
+                >
+                  <Input placeholder="example@gmial.com" />
+                </Form.Item>
               </div>
               <div className="mb-3">
                 <label for="country" className="form-label">
                   Country
                 </label>
-                <div>
+                <Form.Item
+                  name="select"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please select country!",
+                      // type: "select",
+                    },
+                  ]}
+                >
                   <Select
                     className="form-control"
                     showSearch
@@ -139,16 +173,24 @@ const ReqDemoForm = () => {
                       <Option value={list}>{list}</Option>
                     ))}
                   </Select>
-                </div>
-
-                <div className="invalid-feedback">Please Select a Country.</div>
+                </Form.Item>
               </div>
               <div className="mb-3">
                 <label for="numOfUsers" className="form-label">
                   Number of Users
                 </label>
-                <Input placeholder="" />
-                {/* <input type="number" className="form-control" id="numOfUsers" /> */}
+                <Form.Item
+                  name="numberOfUsers"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter in the range of 0 - 10 ",
+                      // type: "number",
+                    },
+                  ]}
+                >
+                  <Input placeholder="" />
+                </Form.Item>
                 <div class="invalid-feedback">
                   Please enter a Number of Users.
                 </div>
@@ -163,7 +205,7 @@ const ReqDemoForm = () => {
             </div>
           </div>
           <input type="submit" value="Submit" className="modal-btn-submit" />
-        </form>
+        </Form>
       </Modal>
     </React.Fragment>
   );

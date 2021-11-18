@@ -31,8 +31,8 @@ $currentBreadCrumb: #d4d4d4;
 
 // -------------------  About us section ---------------------------
 .about {
-  background: transparent url("../../Assets/hero-background.svg") 0% 0%
-    no-repeat padding-box;
+  background: transparent url("../../Assets/Component 40 – 1.png") 0% 0% no-repeat
+  padding-box;
   background-size: cover;
   height: 433px;
   padding-top: 119px;
@@ -41,7 +41,6 @@ $currentBreadCrumb: #d4d4d4;
   h1 {
     @include headingLight;
     margin-top: 40px;
-    font-weight: bold;
   }
   p {
     @include paraLight;
@@ -70,13 +69,18 @@ $currentBreadCrumb: #d4d4d4;
   padding: 80px 82px 80px 100px;
   h1 {
     @include headingDark;
+    margin-bottom: 16px;
     
   }
   p {
     @include paraDark;
+
   }
   .visionCard {
     margin-top: 80px;
+    p{
+      text-align: justify;
+    }
   }
 }
 
@@ -92,6 +96,9 @@ $currentBreadCrumb: #d4d4d4;
     font-weight: 600;
     margin: 0;
     margin-top: 5px;
+  }
+  p{
+    font-size: 16px;
   }
   li {
     margin-bottom: 36px;

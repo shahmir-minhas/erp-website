@@ -17,7 +17,7 @@ const AppForDriver = () => {
         prsim.
       </p>
 
-      <div className="d-flex justify-content-around app-content">
+      <div className="container d-flex justify-content-around app-content">
         <img src={Mobile} alt="" />
 
         <div className="app-points">

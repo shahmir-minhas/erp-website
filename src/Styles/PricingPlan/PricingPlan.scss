@@ -27,6 +27,7 @@ $currentBreadCrumb: #d4d4d4;
   font-size: $paraFontSize;
   color: $paraLight;
 }
+
 .pricing-plan-top {
   background: transparent url("../../Assets/hero-background.svg") 0% 0%
     no-repeat padding-box;
@@ -34,6 +35,8 @@ $currentBreadCrumb: #d4d4d4;
   height: 433px;
   padding-top: 119px;
   padding-left: 100px;
+  padding-right: 100px;
+
   h1 {
     @include headingLight;
     margin-top: 40px;
@@ -81,6 +84,7 @@ $currentBreadCrumb: #d4d4d4;
     box-shadow: 0px 10px 20px #cbcbcb29;
     border: 1px solid #f5f5f5;
     border-radius: 4px;
+
     
     .ant-collapse-header{
         font-size: 16px;

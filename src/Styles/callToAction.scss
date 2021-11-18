@@ -5,9 +5,12 @@
   margin: 160px 0;
   text-align: center;
   width: 100%;
-  background: transparent url("../Assets/hero-background.svg") 0% 0% no-repeat
+
+  background: transparent url("../Assets/Component 40 – 1.png") 0% 0% no-repeat
     padding-box;
   background-size: cover;
+  background-repeat: round;
+  background-attachment: fixed;
 
   h1 {
     color: #ffffff;
@@ -15,6 +18,7 @@
   }
   p {
     color: #ffffff;
+    font-size: 16px;
   }
   div {
     width: 34%;

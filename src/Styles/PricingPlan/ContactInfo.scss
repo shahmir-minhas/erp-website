@@ -38,6 +38,7 @@ $currentBreadCrumb: #d4d4d4;
     no-repeat padding-box;
   //   height: 769px;
   padding: 119px 106px 22px 100px;
+  background-size: cover;
   h1 {
     @include headingLight;
     margin-top: 40px;

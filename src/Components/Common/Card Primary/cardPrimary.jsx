@@ -6,7 +6,7 @@ import { ReactComponent as Path } from "../../../Assets/Icons/Path.svg";
 const CardPrimary = (props) => {
   return (
     <div className="col-4">
-      <div className="cardPrimary text-center p-3">
+      <div className="cardPrimary text-center p-4">
         <div className="img-container mx-auto">
           <img src={props.imgSource} alt="" />
         </div>

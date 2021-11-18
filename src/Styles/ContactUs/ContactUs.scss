@@ -35,6 +35,7 @@ $currentBreadCrumb: #d4d4d4;
   height: 433px;
   padding-top: 119px;
   padding-left: 100px;
+  padding-right: 100px;
 
   h1 {
     @include headingLight;
@@ -68,12 +69,12 @@ $currentBreadCrumb: #d4d4d4;
   margin-top: 50px;
   margin-bottom: 100px;
   border-radius: 4px;
-  width: 90%;
+  width: 100%;
   padding-left: 23px;
 
   .contact-layout {
     padding: 36px 24px 74px 0;
-    width: 59%;
+    width: 60%;
 
     h3 {
       font-size: 24px;

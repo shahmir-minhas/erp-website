@@ -13,8 +13,8 @@ const Footer = () => {
     <React.Fragment>
       <footer>
         <div className="container">
-          <div className="row mb-5">
-            <div className="col">
+          <div className="d-flex justify-content-between mb-5">
+            <div className="">
               <div className="d-flex prism-logo">
                 <Prism />
                 <h6 className="prism">Prism</h6>
@@ -28,7 +28,7 @@ const Footer = () => {
                 without worrying about.
               </p>
             </div>
-            <div className="col">
+            <div className="">
               <h6>Quick Links</h6>
               <ul className="navbar-nav quick-links">
                 <li>
@@ -49,7 +49,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="col">
+            <div className="">
               <h6>Contact Information</h6>
               <ul className="list-unstyled information">
                 <li>

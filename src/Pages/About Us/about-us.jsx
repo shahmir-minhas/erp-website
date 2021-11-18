@@ -144,16 +144,18 @@ const AboutUs = () => {
           our purpose as a company and serves as the standard against which we
           weigh our actions and decisions.
         </p>
-        <div className="row justify-content-between ">
-          {valueProvideCard.map((card) => (
-            <CardPrimary
-              key={card.id}
-              imgSource={card.imgSource}
-              title={card.title}
-              body={card.body}
-              link={card.link}
-            />
-          ))}
+        <div className="">
+          <div className="row justify-content-between ">
+            {valueProvideCard.map((card) => (
+              <CardPrimary
+                key={card.id}
+                imgSource={card.imgSource}
+                title={card.title}
+                body={card.body}
+                link={card.link}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div className="whyPrism">
@@ -179,7 +181,7 @@ const AboutUs = () => {
             <button className="button-active">Request Demo - It's free</button>
           </div>
           <div className="col justify-content-center graph">
-            <img src={Graph} alt=""  />
+            <img src={Graph} alt="" className="ms-xxl-5" />
           </div>
         </div>
       </div>

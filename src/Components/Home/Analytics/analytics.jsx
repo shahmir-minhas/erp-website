@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../../../Styles/analytics.scss";
 import Button from "./../../Common/Button/button";
 import { Tabs } from "antd";
 import Dashboard from "../../../Assets/Dashboard Design.png";
+import "../../../Styles/analytics.scss";
 
 const { TabPane } = Tabs;
 

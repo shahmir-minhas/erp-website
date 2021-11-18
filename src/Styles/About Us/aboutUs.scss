@@ -11,10 +11,12 @@ $currentBreadCrumb: #d4d4d4;
 @mixin headingDark {
   font-size: $headingFont;
   color: $headingDark;
+  font-weight: bold;
 }
 @mixin headingLight {
   font-size: $headingFont;
   color: $headingLight;
+  font-weight: bold;
 }
 
 @mixin paraDark {
@@ -39,6 +41,7 @@ $currentBreadCrumb: #d4d4d4;
   h1 {
     @include headingLight;
     margin-top: 40px;
+    font-weight: bold;
   }
   p {
     @include paraLight;
@@ -58,6 +61,7 @@ $currentBreadCrumb: #d4d4d4;
   }
   .ant-breadcrumb-link a {
     color: $currentBreadCrumb !important;
+    font-size: 16px;
   }
 }
 
@@ -66,6 +70,7 @@ $currentBreadCrumb: #d4d4d4;
   padding: 80px 82px 80px 100px;
   h1 {
     @include headingDark;
+    
   }
   p {
     @include paraDark;
@@ -117,6 +122,7 @@ $currentBreadCrumb: #d4d4d4;
   padding: 40px 80px 160px 100px;
   background: transparent url("../../Assets/hero-background.svg") 0% 0%
     no-repeat padding-box;
+    background-size: cover;
     h1{
       @include headingLight;
     }

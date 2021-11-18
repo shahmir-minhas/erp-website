@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { Breadcrumb, Input, Select } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 import PhoneInput from "./../../Components/Common/PhoneNumber/phoneInput";
 import LocationIcon from "../../Assets/Icons/Icon metro-location.png";
@@ -9,11 +9,27 @@ import Mail from "../../Assets/Icons/Icon material-email.png";
 import Plane from "../../Assets/Group 2601.svg";
 
 import "../../Styles/ContactUs/ContactUs.scss";
+// Destructuring Options from Select
+const { Option } = Select;
 
 const ContactUs = () => {
-  const { Option } = Select;
-  const [formSubmit, setfromSubmit] = useState(true);
+  //hooks
+  const [formSubmit, setfromSubmit] = useState(false);
 
+  const location = useHistory();
+
+  useEffect(() => {
+    console.log("effect");
+    return location.listen(() => {
+      setfromSubmit(false);
+    });
+  });
+
+  const history = useHistory();
+  console.log(location);
+  console.log(history);
+
+  //objects
   const country = [
     "Pakitsan",
     "USA",
@@ -27,7 +43,7 @@ const ContactUs = () => {
     "Afghannistan",
   ];
   const handleSubmit = (e) => {
-    setfromSubmit(false);
+    setfromSubmit(true);
     // e.preventDefault();
   };
 
@@ -36,9 +52,12 @@ const ContactUs = () => {
       <section className="contact-us text-center">
         <div className="text-start">
           <Breadcrumb>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Link href="">Contact Us</Link>
+              Home
+              {/* <Link to="/home">Home</Link> */}
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Link to="/contact-us">Contact Us</Link>
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>
@@ -52,6 +71,17 @@ const ContactUs = () => {
           <div className="d-flex justify-content-between">
             <div className=" contact-layout">
               {formSubmit ? (
+                <div className="thanks-message text-center">
+                  <img src={Plane} alt="" />
+                  <h1>Thanks for reaching out</h1>
+                  <p>Your message has been submitted</p>
+                  <p>Our team will get back to you soon</p>
+                  <p>
+                    Your message will be overlooked and you will be contacted{" "}
+                    <br /> from our department within 24 hours.
+                  </p>
+                </div>
+              ) : (
                 <div className="form">
                   <h3>Contact Us</h3>
 
@@ -147,22 +177,11 @@ const ContactUs = () => {
                     />
                   </form>
                 </div>
-              ) : (
-                <div className="thanks-message text-center">
-                  <img src={Plane} alt="" />
-                  <h1>Thanks for reaching out</h1>
-                  <p>Your message has been submitted</p>
-                  <p>Our team will get back to you soon</p>
-                  <p>
-                    Your message will be overlooked and you will be contacted{" "}
-                    <br /> from our department within 24 hours.
-                  </p>
-                </div>
               )}
             </div>
 
             <div className=" information">
-              <h3 className="text-center">Conatact Information</h3>
+              <h3 className="text-center">Contact Information</h3>
               <div className="mt-5">
                 <div className="d-flex mb-4">
                   <img

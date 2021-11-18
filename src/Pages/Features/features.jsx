@@ -78,7 +78,7 @@ const Features = () => {
           <Breadcrumb>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Link href="">Features</Link>
+              <Link to="/features">Features</Link>
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>

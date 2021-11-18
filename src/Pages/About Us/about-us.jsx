@@ -79,7 +79,7 @@ const AboutUs = () => {
           <Breadcrumb>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Link href="">About Us</Link>
+              <Link to="/about-us">About Us</Link>
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>

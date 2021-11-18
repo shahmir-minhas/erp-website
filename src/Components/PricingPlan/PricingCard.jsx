@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const PricingCard = ({ data }) => {
   // console.log('props', props);
-  const { isActive, price, title, list } = data;
+  const { isActive, price, title, list, key } = data;
   return (
     <React.Fragment>
       <div
@@ -44,7 +44,7 @@ const PricingCard = ({ data }) => {
             </li>
           ))}
         </ul>
-        <Link to="/pricing-plan/contact-information"> 
+        <Link to={`/pricing-plan/contact-information/${key}`} > 
         <button className={`${isActive ? "btn-active" : ""}`}>
           Choose Plan
         </button></Link>

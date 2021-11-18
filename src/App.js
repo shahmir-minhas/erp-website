@@ -15,7 +15,7 @@ function App() {
     <React.Fragment>
       <Layout>
         <Switch>
-          <Route path="/pricing-plan/contact-information" component={ContactInformation} />
+          <Route path="/pricing-plan/contact-information/:id" component={ContactInformation} />
           <Route path="/pricing-plan" component={PricingPlan} />
           <Route path="/contact-us" component={ContactUs} />
           <Route path="/features" component={Features} />

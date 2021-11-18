@@ -73,7 +73,7 @@ const PricingPlan = () => {
       isActive: false,
     },
     {
-      key: 1,
+      key: 2,
       imgSource: "",
       title: "Busniss Plan",
       price: 12.9,
@@ -87,7 +87,7 @@ const PricingPlan = () => {
       isActive: true,
     },
     {
-      key: 1,
+      key: 3,
       imgSource: "",
       title: "Enterprise Plan",
       price: 15.99,

@@ -54,7 +54,7 @@ const ReqDemoForm = () => {
         visible={isModalVisible}
         onOk={handleOk}
         okText="Submit"
-        width={582}
+        // width={582}
         footer={null}
         className="modal-design"
         onCancel={handleCancel}

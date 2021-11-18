@@ -237,9 +237,9 @@ $currentBreadCrumb: #d4d4d4;
     }
   }
 }
-.ant-modal {
-  width: 70% !important;
+// .ant-modal {
   .modal-congrats {
+    width: 70% !important;
     padding: 30px;
     img {
       margin-bottom: 36px;
@@ -255,7 +255,7 @@ $currentBreadCrumb: #d4d4d4;
       margin-top: 44px;
       margin-bottom: 44px;
     }
-    button {
+    .btn-go-home {
       width: 358px;
       height: 48px;
       background: #1760a6 0% 0% no-repeat padding-box;
@@ -264,4 +264,4 @@ $currentBreadCrumb: #d4d4d4;
       color: #ffffff;
     }
   }
-}
+// }

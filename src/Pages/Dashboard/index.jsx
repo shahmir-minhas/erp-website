@@ -7,7 +7,7 @@ import Analytics from "../../Components/Home/Analytics/analytics";
 import AppForDriver from "./../../Components/Home/AppForDriver/appDriver";
 import EveryThing from "../../Components/Home/EverytingYouNeed/everytingYouNeed";
 import CallToAction from "../../Components/Home/CalltoAction/callToAction";
-import ChatIcon from "../../Assets/Icons/chat.png";
+
 import '../../Styles/Dashboard/Dashboard.scss';
 
 // render home componets
@@ -27,9 +27,7 @@ const Index = () => {
         <EveryThing />
         <CallToAction />
         {/* </Layout> */}
-        <div className="messenger justify-item-center">
-          <img src={ChatIcon} alt="" />
-        </div>
+        
       </BrowserRouter>
     </React.Fragment>
   );

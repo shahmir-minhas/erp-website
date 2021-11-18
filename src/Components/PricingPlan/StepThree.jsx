@@ -35,7 +35,7 @@ const StepThree = () => {
               // showArrow={false}
             >
               {country.map((list) => (
-                <Option value={list}>{list}</Option>
+                <Option key={list} value={list}>{list}</Option>
               ))}
             </Select>
             <div className="invalid-feedback">Please Select a Country.</div>

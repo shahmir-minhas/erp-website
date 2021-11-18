@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { Breadcrumb, Switch, Steps, Button, message, Modal } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import StepOne from "../../Components/PricingPlan/StepOne";
 import StepTwo from "../../Components/PricingPlan/StepTwo";
@@ -11,9 +11,17 @@ import Congratulation from "../../Assets/Group 2600.png";
 
 import "../../Styles/PricingPlan/ContactInfo.scss";
 
+const { Step } = Steps;
+
 const ContactInformation = () => {
-  const { Step } = Steps;
   // Hooks
+  // const { id } = useParams();
+  // useEffect(()=>{
+  //   console.log(id);
+  //   // api call here
+
+  // });
+
   const [current, setCurrent] = useState(0);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [switchState, setswitchState] = useState(true);
@@ -75,8 +83,9 @@ const ContactInformation = () => {
         onOk={handleOk}
         onCancel={handleCancel}
         footer={null}
+        className="modal-congrats"
       >
-        <div className="modal-congrats text-center">
+        <div className=" text-center">
           <img src={Congratulation} alt="" />
           <h4>Your Transaction is Successful</h4>
           <p>
@@ -85,7 +94,9 @@ const ContactInformation = () => {
             <strong>bilal@gmail.com</strong>
           </p>
           <Link to="/">
-            <button>Go Home</button>
+            <button htmlType="button" className="btn-go-home">
+              Go Home
+            </button>
           </Link>
         </div>
       </Modal>
@@ -197,16 +208,16 @@ const ContactInformation = () => {
                 <h6>Feature included in business plan.</h6>
                 <ul className="list-unstyled">
                   <li>
-                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                    <img src={CheckMark} alt="" /> All limited links
                   </li>
                   <li>
-                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                    <img src={CheckMark} alt="" /> Own analytic program
                   </li>
                   <li>
-                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                    <img src={CheckMark} alt="" /> Chat Support
                   </li>
                   <li>
-                    <img src={CheckMark} alt="" /> CheckMark aaaa
+                    <img src={CheckMark} alt="" /> Optimize Hashtags
                   </li>
                 </ul>
 

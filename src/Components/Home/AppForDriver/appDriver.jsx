@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import "../../../Styles/appForDriver.scss";
 import Mobile from "../../../Assets/App Picture.png";
 import GooglePlay from "../../../Assets/Icon Google play.png";
-import CheckMark from "../../../Assets/Icons/Icon material-check.png";
+import CheckMark from "../../../Assets/Group 2562.png";
 import StarIcon from "../../../Assets/Icons/Star Icon.png";
+
+import "../../../Styles/appForDriver.scss";
 
 const AppForDriver = () => {
   return (
@@ -19,7 +20,49 @@ const AppForDriver = () => {
       <div className="d-flex justify-content-around app-content">
         <img src={Mobile} alt="" />
 
-        <div>
+        <div className="app-points">
+          <h3>Our App Features</h3>
+          <ul className="list-unstyled">
+            <li>
+              <img src={CheckMark} alt="" />
+              <hr />
+              <p>Track Record Of Deliveries</p>
+            </li>
+
+            <li>
+              <img src={CheckMark} alt="" />
+              <hr />
+              <p>How Many Assigned Orders</p>
+            </li>
+
+            <li>
+              <img src={CheckMark} alt="" />
+              <hr />
+              <p>How Many Are Delivered</p>
+            </li>
+
+            <li>
+              <img src={CheckMark} alt="" />
+              <hr />
+              <p>How Many Are Remaining</p>
+            </li>
+            <li>
+              <img src={CheckMark} alt="" />
+              <hr />
+              <p>Daily Status Of Orders</p>
+            </li>
+            <li>
+              <img src={CheckMark} alt="" />
+              <hr />
+              <p>Electronic Signatures</p>
+            </li>
+            <div class="tick-horizontal-divider"></div>
+          </ul>
+
+          <img src={GooglePlay} alt="" className="google-play-store" />
+        </div>
+
+        {/* <div>
           <h3>Our App Features</h3>
           <div className="d-flex">
             <div className="vertical-check position-relative">
@@ -82,7 +125,7 @@ const AppForDriver = () => {
               <img src={GooglePlay} alt="" />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <img src={StarIcon} alt="" className="StarIcon" />
       </div>

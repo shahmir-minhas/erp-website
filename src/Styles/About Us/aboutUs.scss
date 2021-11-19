@@ -142,3 +142,106 @@ $currentBreadCrumb: #d4d4d4;
       width: 367px;
     }
 }
+
+ // ------------------  Media Query  ----------------------------
+  
+ @media screen and (max-width: 968px) and (min-width: 375px) {
+  .about {
+   
+    height: 329px;
+    padding-top: 108px;
+    padding-left: 17px;
+    padding-right: 17px;
+  
+    h1 {
+      font-size:20px;
+      margin-top: 0px;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 20px;
+      br{
+        display: none;
+      }
+    }
+    hr {
+      margin-top: 27px;
+    }
+  }
+  // -------------------  Our Vision ---------------------------
+  .vision {
+    padding: 80px 17px 100px;
+    h1 {
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .visionCard {
+      margin-top: 40px;
+      p{
+        text-align: justify;
+      }
+    }
+  }
+  
+  // -------------------  Our Mission ---------------------------
+  .ourMission {
+    padding: 80px 17px 40px;
+    h1 {
+      font-size: 16px;
+    }
+    h5 {
+      font-size: 16px;
+      margin-top: 0px;
+    }
+    p{
+      font-size: 14px;
+    }
+    li {
+      margin-bottom: 25px;
+    }
+    li img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  // -------------------   section Value we provide ---------------------------
+  .valueWeProvide {
+    padding: 40px 17px 40px;
+    h1 {
+      font-size: 20px
+    }
+    p {
+      margin-bottom: 42px;
+      font-size: 14px;
+    }
+  }
+  
+  // -------------------   section Why Prism ---------------------------
+  .whyPrism {
+    height: 739px;
+    padding: 40px 17px 50px;
+    margin-bottom: 0;
+      h1{
+        font-size: 20px;
+      }
+      p{
+        
+        line-height: 30px;
+        font-size: 14px;
+      }
+      .graph{
+       display: none;
+      }
+      button{
+        font-weight: normal;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 50px;
+      }
+  }
+ }

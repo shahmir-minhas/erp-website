@@ -1,14 +1,30 @@
-.everythingYouNeed{
-    padding:0 100px;
+.everythingYouNeed {
+  padding: 0 100px;
 
-    h1{
-        font-weight: bold;
-        font-size: 40px;
-        color: #041424;
-        margin-bottom:8px;
+  h1 {
+    font-weight: bold;
+    font-size: 40px;
+    color: #041424;
+    margin-bottom: 8px;
+  }
+  p {
+    color: #747474;
+    font-size: 16px;
+  }
+}
+
+// ---------------------- Media Query -------------------------
+
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .everythingYouNeed {
+    padding: 0 17px;
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 8px;
     }
-    p{
-        color: #747474;
-        font-size: 16px;
+    p {
+      font-size: 14px;
     }
+  }
 }

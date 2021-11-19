@@ -5,8 +5,8 @@ import { ReactComponent as PathBlue } from "../../../Assets/Icons/PathBlue.svg";
 
 const CardSecondary = (props) => {
   return (
-    <div className="col-4 ps-0">
-      <div className="cardSecondary text-start p-3">
+    <div className="col-12 col-lg-4 ps-0">
+      <div className="cardSecondary p-3">
         <div className="img-container">
           <img src={props.imgSource} alt="" className="img-card-secondary" />
         </div>
@@ -14,10 +14,10 @@ const CardSecondary = (props) => {
         <h6>{props.title}</h6>
         <p>{props.body}</p>
         <Link to={props.link}>
-          learn more{" "}
-          <span>
+          Learn more
+          <span className="ms-1">
             <PathBlue />
-          </span>{" "}
+          </span>
         </Link>
       </div>
     </div>

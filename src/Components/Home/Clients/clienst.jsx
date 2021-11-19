@@ -10,11 +10,11 @@ const Clients = () => {
 
   return (
     <React.Fragment>
-      <div className="clients d-flex justify-content-center">
+      <section className="clients d-flex justify-content-center">
       {clientsLogo.map((logo)=> 
         <img src={logo} alt="Brand Logo" className="clients-logo"/>
       )}
-      </div>
+      </section>
     </React.Fragment>
   );
 };

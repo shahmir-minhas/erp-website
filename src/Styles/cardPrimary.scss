@@ -11,7 +11,7 @@ $font16: 16px;
   h4 {
     font-size: 24px;
     color: #041424;
-    font-weight: 700;
+    font-weight: bold;
   }
   p {
     font-size: $font16;
@@ -20,7 +20,7 @@ $font16: 16px;
   a {
     font-size: $font16;
     color: #ff9720;
-    margin-top:33px;
+    margin-top: 33px;
   }
   .img-container {
     width: 136px;
@@ -30,5 +30,38 @@ $font16: 16px;
     margin-top: 24px;
     margin-bottom: 16px;
     padding: 27px;
+  }
+}
+
+// --------------- Media Query  ------------------------
+
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .cardPrimary {
+    // width: 376px;
+    // height: 26.125rem;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 20px #98989829;
+    border-radius: 4px;
+    opacity: 1;
+
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+      text-align: justify;
+    }
+    a {
+      font-size: 14px;
+      margin-left: 60%;
+    }
+
+    .img-container {
+      width: 122px;
+      height: 123px;
+      img{
+        width: 73px;
+      }
+    }
   }
 }

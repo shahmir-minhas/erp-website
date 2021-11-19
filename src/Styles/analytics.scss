@@ -28,11 +28,12 @@
     height: 605px;
     // background:transparent;
   }
-  .tab-img{
-      width: 100%;
+  .tab-img {
+    width: 100%;
   }
 
   .ant-tabs-card {
+    margin-top: 40px;
     .ant-tabs-nav {
       .ant-tabs-tab {
         margin-right: 34px;
@@ -63,6 +64,51 @@
   }
 }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #1760A6;
+  color: #1760a6;
   text-shadow: 0 0 0.25px currentColor;
+}
+
+// ----------------   Media Query   --------------------------
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .analytics {
+    height: 565px;
+    padding: 50px 17px;
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .tab-body {
+      width: 100%;
+      margin-top: 50px;
+      height: 100%;
+      // background:transparent;
+    }
+
+    .ant-tabs-card {
+      .ant-tabs-nav {
+        .ant-tabs-nav-wrap {
+          overflow: visible;
+        }
+        .ant-tabs-tab {
+          margin-right: 0px;
+        }
+      }
+    }
+    .ant-tabs-tab-btn {
+      // background-color:transparent;
+      height: 41px;
+      padding: 10px 6px 9px 6px;
+      font-size: 14px;
+    }
+    .ant-tabs-tab-active {
+      font-size: 14px;
+      padding: 10px 8px 9px 8px;
+    }
+  }
 }

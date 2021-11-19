@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "./../../Common/Button/button";
 import { Tabs } from "antd";
 import Dashboard from "../../../Assets/Dashboard Design.png";
+
 import "../../../Styles/analytics.scss";
 
 const { TabPane } = Tabs;
@@ -15,12 +16,12 @@ const Analytics = () => {
     },
     {
         key: 2,
-        tabTitle: "KPI Dashboard",
+        tabTitle: "BI Dashboard",
         body: Dashboard,
       },
       {
         key: 3,
-        tabTitle: "KPI Dashboard",
+        tabTitle: "Fleet Dashboard",
         body: '',
       },
   ];

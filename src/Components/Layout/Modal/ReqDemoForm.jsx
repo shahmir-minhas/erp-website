@@ -29,21 +29,7 @@ const ReqDemoForm = () => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-  function onChange(value) {
-    console.log(`selected ${value}`);
-  }
 
-  function onBlur() {
-    console.log("blur");
-  }
-
-  function onFocus() {
-    console.log("focus");
-  }
-
-  function onSearch(val) {
-    console.log("search:", val);
-  }
 
   return (
     <React.Fragment>
@@ -61,8 +47,6 @@ const ReqDemoForm = () => {
       >
         <h5>Request Demo Form</h5>
         <p>For the prism demo fill the details below to get your demo.</p>
-
-        {/* <form action="" className="needs-validation"> */}
         <Form
         // name="basic"
         // labelCol={{ span: 8 }}
@@ -71,6 +55,7 @@ const ReqDemoForm = () => {
         // onFinish={onFinish}
         // onFinishFailed={onFinishFailed}
         // autoComplete="off"
+        layout= "horizontal"
         >
           <div className="row">
             <div className="col">
@@ -81,7 +66,7 @@ const ReqDemoForm = () => {
                 <Form.Item
                   name="userName"
                   rules={[
-                    { required: true, message: "Please input your username!" },
+                    { required: true, message: "Please input your Full Name!" },
                   ]}
                 >
                   <Input placeholder="Shahmir Minhas" />
@@ -92,15 +77,20 @@ const ReqDemoForm = () => {
                   Mobile Number
                 </label>
                 <Form.Item
-                  name="phoneNumber"
+                  name="mobileNumber"
                   rules={[
                     {
                       required: true,
-                      message: "Please provide your Phone number!",
+                      message: "Please provide your Mobile Number!",
                     },
                   ]}
                 >
-                  <PhoneInput />
+                  <PhoneInput
+                    value=""
+                    inputProps={{
+                      required: true,
+                    }}
+                  />
                 </Form.Item>
               </div>
 
@@ -109,11 +99,11 @@ const ReqDemoForm = () => {
                   Company
                 </label>
                 <Form.Item
-                  name="phoneNumber"
+                  name="company"
                   rules={[
                     {
                       required: true,
-                      message: "Please provide your Phone number!",
+                      message: "Please provide your Company Name!",
                     },
                   ]}
                 >
@@ -132,7 +122,7 @@ const ReqDemoForm = () => {
                   rules={[
                     {
                       required: true,
-                      message: "Please provide email!",
+                      message: "Please provide Email!",
                       type: "email",
                     },
                   ]}
@@ -149,7 +139,7 @@ const ReqDemoForm = () => {
                   rules={[
                     {
                       required: true,
-                      message: "Please select country!",
+                      message: "Please select Country!",
                       // type: "select",
                     },
                   ]}
@@ -159,10 +149,6 @@ const ReqDemoForm = () => {
                     showSearch
                     placeholder="Select Country"
                     optionFilterProp="children"
-                    onChange={onChange}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onSearch={onSearch}
                     filterOption={(input, option) =>
                       option.children
                         .toLowerCase()

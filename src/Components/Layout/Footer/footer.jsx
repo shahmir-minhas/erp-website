@@ -13,7 +13,7 @@ const Footer = () => {
     <React.Fragment>
       <footer>
         <div className="container">
-          <div className="d-flex justify-content-between mb-5">
+          <div className="footer-wrapper d-flex justify-content-between mb-5">
             <div className="">
               <div className="d-flex prism-logo">
                 <Prism />
@@ -23,7 +23,7 @@ const Footer = () => {
               <p className="lh-lg">
                 This is the best digital tool for all your <br /> businesses
                 which you operate online <br /> it covers Industries like
-                construction, <br /> retail stores and gives you ease to <br />{" "}
+                construction, <br /> retail stores and gives you ease to <br />
                 get all the records in one place <br />
                 without worrying about.
               </p>
@@ -48,7 +48,6 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-
             <div className="">
               <h6>Contact Information</h6>
               <ul className="list-unstyled information">
@@ -101,10 +100,13 @@ const Footer = () => {
         </div>
 
         <div className="bottom-bar d-flex justify-content-around">
-        <div><p className="extra">© Copyright Prism 2021. All Rights Reserved.</p></div>
-          <p className="me-5">© Copyright Prism 2021. All Rights Reserved.</p>
-          <div>
-            <Link to="/">Privacy Policy</Link>
+          <p className="extra">© Copyright Prism 2021. All Rights Reserved.</p>
+          <p className="me-5 right-reserved">
+            © Copyright Prism 2021. All Rights Reserved.
+          </p>
+          <div className="links-bottom-bar">
+            <Link to="/">Privacy Policy</Link> <br />
+            
             <Link to="/">Terms & Conditions</Link>
           </div>
         </div>

@@ -75,7 +75,7 @@ const AboutUs = () => {
   return (
     <React.Fragment>
       <div className="about text-center">
-        <div className="text-start">
+        <div className="text-start d-none d-lg-block">
           <Breadcrumb>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>

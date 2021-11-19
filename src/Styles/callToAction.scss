@@ -24,3 +24,38 @@
     width: 34%;
   }
 }
+
+// -------------- Media Query ---------------------
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .callToAction {
+    padding: 38px 17px 42px;
+    margin: 80px 0;
+    text-align: center;
+    width: 100%;
+
+    background: transparent url("../Assets/Component 40 – 1.png") 0% 0%
+      no-repeat padding-box;
+    background-size: cover;
+    background-repeat: round;
+    background-attachment: fixed;
+
+    h1 {
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    p {
+      color: #ffffff;
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+    div {
+      width: 100%;
+    }
+    button {
+      width: 217px;
+      height: 42px;
+      margin-top: 30px;
+    }
+  }
+}

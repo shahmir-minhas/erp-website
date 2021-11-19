@@ -20,11 +20,11 @@ const Hero = () => {
             worrying about.
           </p>
 
-          <div className="d-flex justify-content-center mt-4">
+          <div className="d-lg-flex justify-content-center mt-4">
             <Button className={"button-active"} type="button" active="active">
               Request Demo - its free
             </Button>
-            <Button className={"ms-3"} type={"button"}>
+            <Button className={"ms-lg-3 mt-4 mt-lg-0 "} type={"button"}>
               <span className="me-2">
                 <img src={PlayIcon} alt="" />
               </span>

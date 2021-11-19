@@ -19,7 +19,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav>
+    <nav className="d-none d-sm-block">
       <div className="d-flex justify-content-between">
         <div className="nav-logo d-flex">
           <Logo />

@@ -119,3 +119,99 @@ $font-color: #041424;
     }
   }
 }
+
+// ---------------------- Media Query  ---------------------------
+
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .appDriver {
+    // background: transparent url("../Assets/Icons/Star Icon.png") 0% 0% no-repeat
+    //   padding-box;
+    //   background-position: 264px 79%;
+    padding: 80px 17px 90px 17px;
+    position: relative;
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    h4 {
+      font-weight: normal;
+    }
+    p {
+      font-size: 14px;
+      color: #747474;
+      margin-top: 0px;
+    }
+    .app-content {
+      flex-direction: column;
+      align-items: center;
+
+      .img-mobile {
+        width: 196px;
+        height: 402px;
+      }
+    }
+
+    .vertical-check {
+      width: 7px;
+    }
+
+    .circle-blue {
+      width: 26px;
+      height: 26px;
+    }
+
+    .StarIcon {
+      position: absolute;
+      width: 214px;
+      height: 206px;
+      opacity: 0.2;
+      right: -115px;
+      bottom: 210px;
+      overflow: hidden;
+    }
+
+    .app-points {
+      h3 {
+        margin-top: 46px;
+      }
+      p {
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+
+      ul li {
+        p {
+          font-size: 16px;
+        }
+      }
+
+      li hr {
+        width: 45px;
+      }
+
+      ul li img {
+        width: 20px;
+        height: 20px;
+      }
+
+      ul {
+        margin-bottom: 42px;
+      }
+
+      .tick-horizontal-divider {
+        left: 8px;
+        width: 4px;
+      }
+
+      .tick-horizontal-divider:before {
+        width: 7px;
+        height: 7px;
+      }
+
+      .tick-horizontal-divider:after {
+        width: 7px;
+        height: 7px;
+      }
+    }
+  }
+}

@@ -10,7 +10,30 @@
     font-size: 16px;
     color: #747474;
   }
-  .card-mt{
+  .card-mt {
     margin-top: 4.25rem;
+  }
+}
+
+//  ----------------     Media Query ---------------------
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .solutions {
+    padding: 60px 22px 160px 17px;
+    h1 {
+      font-size: 20px;
+      color: #041424;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 14px;
+      color: #747474;
+    }
+    br {
+      display: none;
+    }
+    .card-mt {
+      margin-top: 4.25rem;
+    }
   }
 }

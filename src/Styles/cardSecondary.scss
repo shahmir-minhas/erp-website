@@ -8,6 +8,7 @@ $font16: 16px;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 4px;
   margin-bottom: 48px;
+  text-align: left;
 
   h6 {
     font-size: 16px;
@@ -20,8 +21,8 @@ $font16: 16px;
   }
   a {
     font-size: $font16;
-    color: #1760A6;
-    margin-top:33px;
+    color: #1760a6;
+    margin-top: 33px;
   }
   .img-container {
     width: 84px;
@@ -32,7 +33,31 @@ $font16: 16px;
     margin-bottom: 16px;
     padding: 18px;
   }
-  .img-card-secondary{
-      width: 50px;
+  .img-card-secondary {
+    width: 50px;
+  }
+}
+
+// ------------------- Media Query ----------------------------
+
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .cardSecondary {
+    margin-bottom: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 100%;
+
+    h6 {
+      font-size: 16px;
+      color: #041424;
+      font-weight: bold;
+    }
+
+    .img-container {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

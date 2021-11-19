@@ -1,18 +1,46 @@
-.clients{
-    background-color: #F8FBFF;
-    height: 167px;
-    width: 100%;
-    margin-top:220px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    align-items: center;
+.clients {
+  background-color: #f8fbff;
+  height: 167px;
+  width: 100%;
+  margin-top: 220px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
 
-    .clients-logo:not(:nth-last-child(2)){
-        width: 100px;
-        height: 35px;
-    }
-    .clients-logo:not(:last-child){
-        margin-right:135px ;
-    }
+  .clients-logo:not(:nth-last-child(2)) {
+    width: 100px;
+    height: 35px;
+  }
+  .clients-logo:not(:last-child) {
+    margin-right: 135px;
+  }
+}
+// -------------   Media Query    ----------------------------
 
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .clients {
+    height: 103px;
+
+    .clients-logo:not(:nth-last-child(2)) {
+      width: 100px;
+      height: 35px;
+    }
+    .clients-logo:nth-child(1) {
+      display: none;
+    }
+    .clients-logo:nth-child(2) {
+      width: 84px;
+      height: 26px;
+    }
+    .clients-logo:nth-child(3) {
+      width: 81px;
+      height: 64px;
+    }
+    .clients-logo:nth-child(4) {
+      display: none;
+    }
+    .clients-logo:not(:last-child) {
+      margin-right: 42px;
+    }
+  }
 }

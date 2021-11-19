@@ -10,19 +10,19 @@ const Solutions = () => {
     {
       imgSource: Sketch,
       title: "Construction Industries",
-      body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records",
+      body: "This covers Industries like ,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like ,retail stores and gives you ease to get all records",
       link: "/",
     },
     {
       imgSource: Store,
       title: "Construction Retail Store",
-      body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records",
+      body: "This covers Industries like ,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like ,retail stores and gives you ease to get all records",
       link: "/",
     },
     {
       imgSource: Boxes,
       title: "Construction Warehouses",
-      body: "This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records",
+      body: "This covers Industries like ,retail stores and gives you ease to get all records This covers Industries like construction,retail stores and gives you ease to get all records This covers Industries like ,retail stores and gives you ease to get all records",
       link: "/",
     },
   ];

@@ -18,7 +18,7 @@ const AppForDriver = () => {
       </p>
 
       <div className="container d-flex justify-content-around app-content">
-        <img src={Mobile} alt="" />
+        <img src={Mobile} alt="" className="img-mobile" />
 
         <div className="app-points">
           <h3>Our App Features</h3>
@@ -58,8 +58,10 @@ const AppForDriver = () => {
             </li>
             <div class="tick-horizontal-divider"></div>
           </ul>
-
-          <img src={GooglePlay} alt="" className="google-play-store" />
+          <div className="text-center">
+            <h6 className="fw-bold">Download Our App</h6>
+            <img src={GooglePlay} alt="" className="google-play-store mx-auto" />
+          </div>
         </div>
 
         {/* <div>

@@ -109,7 +109,7 @@
       background-color: grey;
       height: 319px;
       width: 356px;
-      margin-left: 30px;
+      margin-left: 25px;
       border-radius: 4px;
     }
     .slick-arrow {
@@ -132,6 +132,98 @@
       background: transparent url("../../Assets/Icons/Component 39 – 1.png") 0%
         0% no-repeat padding-box;
       // z-index: 1;
+    }
+  }
+}
+// --------------
+// -------------- MEdia query----------------
+// --------------
+
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .feature-wrapper {
+    padding-top: 108px;
+    padding-left: 17px;
+    padding-right: 17px;
+
+    .comprehensiveOverview {
+      padding-bottom: 40px;
+      a {
+        font-size: 14px;
+      }
+
+      h1:first-child {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+      h1:nth-child(2) {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .cardTarnary p {
+        font-size: 14px;
+      }
+      .border-sm-none {
+        border: none !important;
+      }
+      .card-container {
+        box-shadow: none;
+        border-radius: 0px;
+        margin-left: 0px;
+      }
+    }
+
+    // -------------- Break Down Dashboad Feature Css ----------------
+
+    .dashboardFeature {
+      padding-top: 40px;
+      h1 {
+        font-size: 20px;
+      }
+      .ant-tabs {
+        .ant-tabs-nav-wrap {
+          .ant-tabs-nav-list {
+            .ant-tabs-tab {
+              margin: 0px 10px;
+            }
+
+            .ant-tabs-tab-btn {
+              font-size: 14px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  .videoGallery {
+    padding: 70px 17px 30px 17px;
+    text-align: left !important;
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 30px;
+    }
+    .video-slider {
+      .sliderVideoHolder {
+        width: 216px;
+        height: 195px;
+        margin-left: 45px;
+      }
+      .slick-arrow {
+        height: 35px;
+        width: 35px;
+        margin: 0 35px;
+      }
+      .slick-prev {
+        left: -50px;
+      }
+      .slick-next {
+        right: -50px;
+      }
     }
   }
 }

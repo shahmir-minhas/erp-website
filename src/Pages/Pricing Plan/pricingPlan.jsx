@@ -107,7 +107,7 @@ const handleSwitch = (check) =>{
   return (
     <React.Fragment>
       <section className="pricing-plan-top text-center">
-        <div className="text-start">
+        <div className="text-start d-none d-lg-block">
           <Breadcrumb>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>
@@ -121,7 +121,7 @@ const handleSwitch = (check) =>{
           We offer different pricing plan options for users our pricing includes
           Starter, Business & Enterprise Plans.
         </p>
-        <p>
+        <p className="text-center switch-yearly">
           Monthly <Switch className="" defaultChecked onChange={handleSwitch} /> Yearly 
           {switchState?<Link className="ms-1">Save 30%</Link>:null}
         </p>

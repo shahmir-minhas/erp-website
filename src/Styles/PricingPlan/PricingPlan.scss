@@ -51,7 +51,6 @@ $currentBreadCrumb: #d4d4d4;
     border: 1px solid #ffffff;
     width: 179px;
     opacity: 1;
-  
   }
   a:nth-child(2) {
     color: $paraLight;
@@ -68,7 +67,6 @@ $currentBreadCrumb: #d4d4d4;
   }
 }
 .pricingPlan-wrapper {
-  
   padding: 580px 100px 160px 100px;
   h1 {
     @include headingDark;
@@ -85,20 +83,83 @@ $currentBreadCrumb: #d4d4d4;
     border: 1px solid #f5f5f5;
     border-radius: 4px;
 
-    
-    .ant-collapse-header{
+    .ant-collapse-header {
+      font-size: 16px;
+      font-weight: bold;
+      color: #041424;
+    }
+    p {
+      font-size: 14px;
+      color: #041424;
+    }
+    .ant-collapse-content {
+      padding-left: 26px;
+      padding-right: 50px;
+    }
+  }
+}
+// --------------
+// -------------- MEdia query----------------
+// --------------
+
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .pricing-plan-top {
+    height: 433px;
+    padding-top: 108px;
+    padding-left: 17px;
+    padding-right: 17px;
+
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+      text-align: left;
+    }
+    hr {
+      background-color: none;
+      border: 1px solid #ffffff;
+      width: 105px;
+      opacity: 1;
+    }
+    .switch-yearly {
+      font-size: 16px;
+      button {
+        width: 39px;
+      }
+    }
+  }
+  .pricingPlan-wrapper {
+    padding: 1500px 17px 40px;
+    h1 {
+      font-size: 20px;
+      text-align: left !important;
+    }
+    p {
+      text-align: left;
+    }
+    // .panel{
+
+    // }
+    .site-collapse-custom-collapse {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 10px 20px #cbcbcb29;
+      border: 1px solid #f5f5f5;
+      border-radius: 4px;
+
+      .ant-collapse-header {
         font-size: 16px;
         font-weight: bold;
         color: #041424;
-    }
-    p{
+      }
+      p {
         font-size: 14px;
         color: #041424;
-    }
-    .ant-collapse-content {
-        padding-left: 26px;
-        padding-right: 50px;
+      }
+      .ant-collapse-content {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
-
 }

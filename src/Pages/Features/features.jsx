@@ -70,11 +70,19 @@ const Features = () => {
     slidesToScroll: 1,
     centerPadding: "0px",
   };
-
+  const settingsSmallScreen = {
+    // className: "center",
+    centerMode: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: "0px",
+  };
   return (
     <React.Fragment>
       <section className="about text-center">
-        <div className="text-start">
+        <div className="text-start d-none d-lg-block">
           <Breadcrumb>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>
@@ -94,7 +102,7 @@ const Features = () => {
 
       <div className="feature-wrapper">
         <section className="row comprehensiveOverview">
-          <div className="col-4">
+          <div className="col-12 col-lg-4">
             <h1>
               A Comprehensive <br /> Overview Of Our
             </h1>
@@ -107,12 +115,12 @@ const Features = () => {
             </p>
             <Link>
               Explore All
-              <span>
+              <span className="ms-1">
                 <img src={PathBlue} alt="" />
               </span>
             </Link>
           </div>
-          <div className="col-8">
+          <div className="col-12 col-lg-8">
             <div className="d-flex card-container">
               {featureCard.map((card) => (
                 <CardTernary
@@ -148,7 +156,7 @@ const Features = () => {
           All the features of the prism is shown in animated video. So you can
           easily know how the different feature of the prism works
         </p>
-        <div className="video-slider">
+        <div className="video-slider d-none d-lg-block">
           <Slider {...settings}>
             <div>
               <div className="sliderVideoHolder"></div>
@@ -159,15 +167,25 @@ const Features = () => {
             <div>
               <div className="sliderVideoHolder"></div>
             </div>
-            <div index={4}>
+            <div>
               <div className="sliderVideoHolder"></div>
             </div>
-            {/* <div>
+          </Slider>
+        </div>
+        <div className="video-slider d-block d-lg-none">
+          <Slider {...settingsSmallScreen}>
+            <div>
               <div className="sliderVideoHolder"></div>
             </div>
             <div>
               <div className="sliderVideoHolder"></div>
-            </div> */}
+            </div>
+            <div>
+              <div className="sliderVideoHolder"></div>
+            </div>
+            <div>
+              <div className="sliderVideoHolder"></div>
+            </div>
           </Slider>
         </div>
       </section>

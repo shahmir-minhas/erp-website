@@ -161,7 +161,7 @@ const AboutUs = () => {
       <div className="whyPrism">
         <div className="row">
           <div className="col">
-            <h1>Why Prism ?</h1>
+            <h1>Why Hysabat ?</h1>
             <p>
               This is the best digital tool for all your businesses which you
               operate online it covers Industries like construction, retail

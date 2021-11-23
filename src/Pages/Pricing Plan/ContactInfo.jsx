@@ -8,6 +8,7 @@ import StepThree from "../../Components/PricingPlan/StepThree";
 import StepFour from "../../Components/PricingPlan/StepFour";
 import CheckMark from "../../Assets/Icons/checkMark-OrderSummary.svg";
 import Congratulation from "../../Assets/Group 2600.png";
+import { ReactComponent as BackArrow } from "../../Assets/Icons/Icon material-arrow_back.svg";
 
 import "../../Styles/PricingPlan/ContactInfo.scss";
 
@@ -90,7 +91,7 @@ const ContactInformation = () => {
           <h4>Your Transaction is Successful</h4>
           <p>
             You have successfully subscribed to our "Business Plan". Your
-            credentials has been sent to your email address{" "}
+            credentials has been sent to your email address
             <strong>bilal@gmail.com</strong>
           </p>
           <Link to="/">
@@ -106,7 +107,7 @@ const ContactInformation = () => {
       */}
 
       <div className="contact-info-wrapper">
-        <Breadcrumb>
+        <Breadcrumb className="d-none d-lg-block">
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>
             <Link to="/pricing-plan">Pricing Plan</Link>
@@ -116,15 +117,20 @@ const ContactInformation = () => {
           </Breadcrumb.Item>
         </Breadcrumb>
 
-        <div className="d-flex">
+        <div className="d-flex flex-wrap flex-lg-nowrap">
           <div className="contact-info">
-            <Link to="/pricing-plan">Back</Link>
+            <Link to="/pricing-plan">
+              {" "}
+              <BackArrow /> Back
+            </Link>
             <div className="contact-info-form me-3">
-              <Steps current={current}>
-                {steps.map((item) => (
-                  <Step key={item.title} title={item.title} />
-                ))}
-              </Steps>
+              <div className="d-none d-lg-block">
+                <Steps current={current}>
+                  {steps.map((item) => (
+                    <Step key={item.title} title={item.title} />
+                  ))}
+                </Steps>
+              </div>
 
               {/* <div className="steps-content">{steps[current].content}</div> */}
               <div className="steps-content">
@@ -138,7 +144,8 @@ const ContactInformation = () => {
                   ) : steps[current] === steps[3] ? (
                     <StepFour />
                   ) : null}
-                  <div className="steps-action d-flex justify-content-between">
+
+                  <div className="steps-action d-flex flex-wrap flex-lg-nowrap justify-content-between">
                     {steps[current] === steps[0] ? (
                       <div className="notify justify-content-center">
                         <p>
@@ -153,7 +160,7 @@ const ContactInformation = () => {
                     <div>
                       {current > 0 && (
                         <Button
-                          style={{ margin: "0 8px" }}
+                          style={{ margin: "0 8px 0 0" }}
                           onClick={() => prev()}
                         >
                           Back
@@ -179,12 +186,12 @@ const ContactInformation = () => {
           <div className="order-summary">
             <p>
               Monthly
-              <span className="mx-1">
+              <span className="mx-2">
                 <Switch className="" defaultChecked onChange={handleSwitch} />
               </span>
               Yearly
               {switchState ? (
-                <Link to="/pricing-plan" className="ms-1">
+                <Link to="/pricing-plan" className="ms-2">
                   Save 30%
                 </Link>
               ) : null}

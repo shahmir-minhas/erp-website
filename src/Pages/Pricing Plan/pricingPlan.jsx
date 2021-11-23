@@ -8,7 +8,6 @@ import PricingCard from "../../Components/PricingPlan/PricingCard";
 const { Panel } = Collapse;
 
 const PricingPlan = () => {
-
   const [switchState, setswitchState] = useState(true);
   // frequently asked question
   const askedQuestions = [
@@ -67,8 +66,8 @@ const PricingPlan = () => {
         { id: 1, feature: "2 GB of free space", isAvailable: true },
         { id: 2, feature: "30 days of free service", isAvailable: true },
         { id: 3, feature: "30 days of free support", isAvailable: false },
-        { id: 4, feature: "Create 10 users", isAvailable: false},
-        { id: 5, feature: "All analytics of business", isAvailable: false},
+        { id: 4, feature: "Create 10 users", isAvailable: false },
+        { id: 5, feature: "All analytics of business", isAvailable: false },
       ],
       isActive: false,
     },
@@ -82,7 +81,7 @@ const PricingPlan = () => {
         { id: 2, feature: "30 days of free service", isAvailable: true },
         { id: 3, feature: "30 days of free support", isAvailable: true },
         { id: 4, feature: "Create 10 users", isAvailable: true },
-        { id: 5, feature: "All analytics of business", isAvailable: false},
+        { id: 5, feature: "All analytics of business", isAvailable: false },
       ],
       isActive: true,
     },
@@ -101,9 +100,54 @@ const PricingPlan = () => {
       isActive: false,
     },
   ];
-const handleSwitch = (check) =>{
+  const pricingCardSmallScreen = [
+    {
+      key: 1,
+      imgSource: "",
+      title: "Busniss Plan",
+      price: 12.9,
+      list: [
+        { id: 1, feature: "2 GB of free space", isAvailable: true },
+        { id: 2, feature: "30 days of free service", isAvailable: true },
+        { id: 3, feature: "30 days of free support", isAvailable: true },
+        { id: 4, feature: "Create 10 users", isAvailable: true },
+        { id: 5, feature: "All analytics of business", isAvailable: false },
+      ],
+      isActive: true,
+    },
+    {
+      key: 2,
+      imgSource: "",
+      title: "Starter Plan",
+      price: 9.99,
+      list: [
+        { id: 1, feature: "2 GB of free space", isAvailable: true },
+        { id: 2, feature: "30 days of free service", isAvailable: true },
+        { id: 3, feature: "30 days of free support", isAvailable: false },
+        { id: 4, feature: "Create 10 users", isAvailable: false },
+        { id: 5, feature: "All analytics of business", isAvailable: false },
+      ],
+      isActive: false,
+    },
+
+    {
+      key: 3,
+      imgSource: "",
+      title: "Enterprise Plan",
+      price: 15.99,
+      list: [
+        { id: 1, feature: "2 GB of free space", isAvailable: true },
+        { id: 2, feature: "30 days of free service", isAvailable: true },
+        { id: 3, feature: "30 days of free support", isAvailable: true },
+        { id: 4, feature: "Create 10 users", isAvailable: true },
+        { id: 5, feature: "All analytics of business", isAvailable: true },
+      ],
+      isActive: false,
+    },
+  ];
+  const handleSwitch = (check) => {
     setswitchState(check);
-};
+  };
   return (
     <React.Fragment>
       <section className="pricing-plan-top text-center">
@@ -122,15 +166,22 @@ const handleSwitch = (check) =>{
           Starter, Business & Enterprise Plans.
         </p>
         <p className="text-center switch-yearly">
-          Monthly <Switch className="" defaultChecked onChange={handleSwitch} /> Yearly 
-          {switchState?<Link className="ms-1">Save 30%</Link>:null}
+          Monthly <Switch className="" defaultChecked onChange={handleSwitch} />{" "}
+          Yearly
+          {switchState ? <Link className="ms-1">Save 30%</Link> : null}
         </p>
 
         {/* handling 
             Pricing cards 
                     here */}
-        <div className="d-flex flex-wrap justify-content-center align-items-center">
+        <div className="d-flex d-none d-lg-flex flex-wrap justify-content-center align-items-center">
           {pricingCards.map((card) => (
+            <PricingCard data={card} />
+          ))}
+        </div>
+
+        <div className="d-flex flex-wrap d-sm-block d-lg-none justify-content-center align-items-center">
+          {pricingCardSmallScreen.map((card) => (
             <PricingCard data={card} />
           ))}
         </div>
@@ -165,4 +216,4 @@ const handleSwitch = (check) =>{
   );
 };
 
-export default PricingPlan;      
+export default PricingPlan;

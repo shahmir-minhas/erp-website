@@ -104,3 +104,70 @@
     }
   }
 }
+
+//----------------------  Media Query -------------------------
+
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  .steps-content {
+    width: 341px !important;
+    input {
+      // background: #ffffff 0% 0% no-repeat padding-box !important;
+      // border: 1px solid #d6d6d6 !important;
+      // border-radius: 4px !important;
+      width: 311px !important;
+      height: 44px !important;
+    }
+    label {
+      font-size: 14px;
+      color: #041720;
+      //   font-weight: bold;
+    }
+    // button {
+    //   width: 162px;
+    //   height: 42px;
+    //   background: #1760a6 0% 0% no-repeat padding-box;
+    //   border: 1px solid #1760a6;
+    //   border-radius: 2px;
+    // }
+    .step-one {
+      margin-bottom: 0;
+    }
+    .step-two {
+      .ant-select {
+        width: 90%;
+      }
+    }
+    .step-three {
+      .ant-select {
+        width: 90%;
+      }
+    }
+    .step-four {
+      .switch-value {
+        font-size: 16px;
+        color: #041720;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+      button {
+        width: 51px;
+        height: 24px;
+      }
+      .ant-checkbox-wrapper:last-child{
+        padding-right: 30px !important;
+      }
+      // .ant-picker {
+      //   padding-top: 0;
+      //   padding-bottom: 0;
+      //   .ant-picker-input {
+      //     width: 206px;
+      //     border: none;
+      //     input {
+      //       border: 0 !important;
+      //       width: 50px !important;
+      //     }
+      //   }
+      // }
+    }
+  }
+}

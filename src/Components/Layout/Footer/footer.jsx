@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "../../../Styles/footer.scss";
 import { Link } from "react-router-dom";
-import { ReactComponent as Prism } from "../../../Assets/Icons/Prism.svg";
 import { ReactComponent as Facebook } from "../../../Assets/Icons/Icon awesome-facebook-square.svg";
 import { ReactComponent as Twitter } from "../../../Assets/Icons/Icon awesome-twitter.svg";
 import { ReactComponent as Linked } from "../../../Assets/Icons/Icon awesome-linkedin.svg";
 import { ReactComponent as Insta } from "../../../Assets/Icons/Icon awesome-instagram.svg";
 import { ReactComponent as Youtube } from "../../../Assets/Icons/Icon awesome-youtube.svg";
+import LogoFooter from "../../../Assets/Icons/logo-footer-png.png";
 
 const Footer = () => {
   return (
@@ -15,12 +15,10 @@ const Footer = () => {
         <div className="container">
           <div className="footer-wrapper d-flex justify-content-between mb-5">
             <div className="">
-              <div className="d-flex prism-logo">
-                <Prism />
-                <h6 className="prism">Prism</h6>
-              </div>
+              {/* <LogoFooter className="mb-3" /> */}
+              <img src={LogoFooter} alt="" />
 
-              <p className="lh-lg">
+              <p className="lh-lg mt-2">
                 This is the best digital tool for all your <br /> businesses
                 which you operate online <br /> it covers Industries like
                 construction, <br /> retail stores and gives you ease to <br />
@@ -106,7 +104,6 @@ const Footer = () => {
           </p>
           <div className="links-bottom-bar">
             <Link to="/">Privacy Policy</Link> <br />
-            
             <Link to="/">Terms & Conditions</Link>
           </div>
         </div>

@@ -20,7 +20,7 @@ const StepFour = () => {
         <h6>We Accept</h6>
         <img src={CreditCard} alt="" />
         <img src={Visa} alt="" />
-        <div className="d-flex">
+        <div className="d-flex flex-wrap flex-lg-nowrap">
           <div className="mb-4 me-3 ">
             <label htmlFor="nameOnCard" className="form-label">
               Name on Card
@@ -37,7 +37,7 @@ const StepFour = () => {
             </div>
           </div>
         </div>
-        <div className="d-flex">
+        <div className="d-flex flex-wrap flex-lg-nowrap">
           <div className="me-4">
             <label htmlFor="expireDate" className="form-label">
               Expire Date
@@ -48,10 +48,10 @@ const StepFour = () => {
 
           <div className="mb-4 cvc-input">
             <div className="d-flex justify-content-lg-between">
-              <label htmlFor="cvc" className="form-label">
+              <label htmlFor="cvc" className="form-label mt-2 mt-lg-0">
                 CVC
               </label>
-              <img src={QuestionIcon} alt="" />
+              <img src={QuestionIcon} alt="" className="d-none d-lg-block" />
             </div>
             <Input />
           </div>

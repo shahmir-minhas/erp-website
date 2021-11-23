@@ -18,7 +18,7 @@ const StepThree = () => {
 
   return (
     <React.Fragment>
-      <div className="d-flex step-three">
+      <div className="d-flex flex-wrap flex-lg-nowrap  step-three">
         <div className="me-3 w-100">
           <div className="mb-4">
             <label htmlFor="country" className="form-label">

@@ -6,7 +6,7 @@ import "../../Styles/Common/StepsContactInfo.scss";
 const StepOne = () => {
   return (
     <React.Fragment>
-      <div className="d-flex step-one">
+      <div className="d-flex flex-wrap flex-lg-nowrap step-one">
         <div className="me-3 w-100">
           <div className="mb-4 ">
             <label htmlFor="firstName" className="form-label">

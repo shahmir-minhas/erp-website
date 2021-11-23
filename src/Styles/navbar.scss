@@ -33,7 +33,7 @@ nav {
     color: #1760a6;
     opacity: 0.8;
   }
-  
+
   button:active {
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 1px solid #ffffff;
@@ -47,7 +47,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding-left: 0;
-    margin:0;
+    margin: 0;
 
     li {
       list-style-type: none;
@@ -66,7 +66,7 @@ nav {
         color: #ffffff;
         border-bottom: 1px solid white;
       }
-       .active {
+      .active {
         color: #ffffff;
         border-bottom: 1px solid white;
       }
@@ -78,6 +78,52 @@ nav {
       //   color: #ffffff;
       //   // border-bottom: 1px solid white;
       // }
+    }
+  }
+}
+@media screen and (max-width: 968px) and (min-width: 375px) {
+  nav {
+    // background-color: #1760a6;
+    // height: 79px;
+    // width: 100%;
+    padding: 24px 17px 25px 17px;
+    // position: fixed;
+    // z-index: 1;
+  }
+  .drawer-nav {
+    li{
+      margin-bottom: 20px ;
+    }
+    .link {
+      color: #ffffff;
+      font-size: 16px;
+      // padding-left: 0;
+      // padding-right: 0;
+      // padding-bottom: 1px;
+      // margin-left: 53px;
+      // border-bottom: 1px solid #1760a6;
+    }
+    // .link:hover {
+    //   color: #ffffff;
+    //   border-bottom: 1px solid white;
+    // }
+    .active {
+      color: #175fa4;
+      border-bottom: 2px solid #175fa4;
+    }
+  }
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+    .ant-drawer-content {
+      background-color: #1d1d1d !important;
+
+      .ant-drawer-close {
+        color: #ffffff !important;
+        width: 50px !important;
+      }
+      .ant-drawer-body {
+        padding: 134px 22px 0 77px !important;
+      }
     }
   }
 }

@@ -12,7 +12,7 @@ const StepTwo = () => {
   ];
   return (
     <React.Fragment>
-      <div className="d-flex step-two">
+      <div className="d-flex  flex-wrap flex-lg-nowrap step-two">
         <div className="me-3 w-100">
           <div className="mb-4 ">
             <label htmlFor="company" className="form-label">

@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { ReactComponent as Logo } from "../../../Assets/Icons/logo.svg";
 import { Link, NavLink } from "react-router-dom";
-import "../../../Styles/navbar.scss";
+import { Drawer, Button } from "antd";
+import { ReactComponent as NavBtn } from "../../../Assets/Icons/navbar-btn.svg";
+import { ReactComponent as LogoNav } from "../../../Assets/Icons/logo-nav.svg";
 
-import Button from "./../../Common/Button/button";
+
+import "../../../Styles/navbar.scss";
 import ReqDemoForm from "../Modal/ReqDemoForm";
 
 const NavBar = () => {
+  const [visible, setVisible] = useState(false);
+
   const navLinks = [
     { title: "Home", url: "/home" },
     { title: "About Us", url: "/about-us" },
@@ -18,31 +23,71 @@ const NavBar = () => {
     },
   ];
 
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
   return (
-    <nav className="d-none d-sm-block">
-      <div className="d-flex justify-content-between">
-        <div className="nav-logo d-flex">
-          <Logo />
-          <h1>Prism</h1>
+    <React.Fragment>
+      <nav className="d-none d-sm-block">
+        <div className="d-flex justify-content-between">
+          <div className="nav-logo d-flex">
+          <LogoNav/>
+          </div>
+          <ul className="">
+            {navLinks.map((link) => {
+              return (
+                <li
+                  key={link.title}
+                  className="nav-item"
+                  // className={currentPage === index ? "li-active" : ""}
+                >
+                  <NavLink className=" link" to={link.url}>
+                    {link.title}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+          <ReqDemoForm />
         </div>
-        <ul className="">
-          {navLinks.map((link) => {
-            return (
-              <li
-                key={link.title}
-                className="nav-item"
-                // className={currentPage === index ? "li-active" : ""}
-              >
-                <NavLink className=" link" to={link.url}>
-                  {link.title}
-                </NavLink>
-              </li>
-            );
-          })}
-        </ul>
-        <ReqDemoForm/>
-      </div>
-    </nav>
+      </nav>
+      <nav className="d-sm-block d-lg-none">
+        <div className="d-flex justify-content-between">
+          <Link to="/home"> <LogoNav /> </Link>
+          <NavBtn className="mt-2" onClick={showDrawer} />
+        </div>
+
+        <Drawer
+          // title="Basic Drawer"
+          placement="right"
+          onClose={onClose}
+          visible={visible}
+          size={"large"}
+        >
+          <div className="drawer-nav">
+            <ul className="list-unstyled">
+              {navLinks.map((link) => {
+                return (
+                  <li
+                    key={link.title}
+                    className="nav-item"
+                    // className={currentPage === index ? "li-active" : ""}
+                  >
+                    <NavLink className=" link" to={link.url} onClick={onClose} >
+                      {link.title}
+                    </NavLink>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </Drawer>
+      </nav>
+    </React.Fragment>
   );
 };
 

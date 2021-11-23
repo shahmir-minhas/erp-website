@@ -51,7 +51,7 @@ const ContactUs = () => {
     <React.Fragment>
       <section className="contact-us text-center">
         <div className="text-start">
-          <Breadcrumb>
+          <Breadcrumb className="d-none d-lg-block">
             <Breadcrumb.Item>
               Home
               {/* <Link to="/home">Home</Link> */}
@@ -68,7 +68,7 @@ const ContactUs = () => {
           us which is given below.
         </p>
         <section className="contact-container justify-content-center text-start me-auto">
-          <div className="d-flex justify-content-between">
+          <div className="d-flex flex-wrap-sm justify-content-between">
             <div className=" contact-layout">
               {formSubmit ? (
                 <div className="thanks-message text-center">
@@ -85,9 +85,9 @@ const ContactUs = () => {
                 <div className="form">
                   <h3>Contact Us</h3>
 
-                  <form action="" className="needs-validation mt-5">
-                    <div className="d-flex">
-                      <div className="me-3 w-100">
+                  <form action="" className="needs-validation mt-3 mt-lg-5">
+                    <div className="d-flex flex-wrap-sm">
+                      <div className="me-0 me-lg-3 w-100">
                         <div className="mb-3 ">
                           <label htmlFor="userName" className="form-label">
                             Full Name
@@ -162,7 +162,7 @@ const ContactUs = () => {
                         Please write a message.
                       </div>
                     </div>
-                    <div className="mb-5 mt-5 text-end ">
+                    <div className="mb-2 mt-2 mb-lg-5 mt-lg-5 text-end ">
                       <input
                         type="reset"
                         value="Reset Form"
@@ -182,7 +182,7 @@ const ContactUs = () => {
 
             <div className=" information">
               <h3 className="text-center">Contact Information</h3>
-              <div className="mt-5">
+              <div className="mt-2 mt-lg-5">
                 <div className="d-flex mb-4">
                   <img
                     src={LocationIcon}
